@@ -77,8 +77,9 @@ export function CalPopupButton({
   }, [])
 
   const handleClick = () => {
-    if (typeof window !== "undefined" && (window as any).Cal) {
-      ;(window as any).Cal("ui", {
+    if (typeof window !== "undefined" && (window as unknown as { Cal?: unknown }).Cal) {
+      const Cal = (window as unknown as { Cal: (action: string, options: Record<string, unknown>) => void }).Cal
+      Cal("ui", {
         styles: {
           branding: {
             brandColor: "#f97316",
@@ -88,7 +89,7 @@ export function CalPopupButton({
         layout: "month_view",
         ...config,
       })
-      ;(window as any).Cal("openModal", {
+      Cal("openModal", {
         calLink,
       })
     } else {

@@ -29,7 +29,7 @@ export default function SuccessPage() {
                 <div>
                   <p className="font-medium text-orange-900">Confirmation Email</p>
                   <p className="text-sm text-orange-700">
-                    You'll receive a detailed confirmation email within 5 minutes
+                    You&apos;ll receive a detailed confirmation email within 5 minutes
                   </p>
                 </div>
               </div>

@@ -305,9 +305,9 @@ export default function GamalConsultingLanding() {
                 <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
                   <TrendingUp className="w-8 h-8 text-red-600" />
                 </div>
-                <h3 className="text-xl font-semibold text-slate-900 mb-4">ROAS says "win" but margins are thinning</h3>
+                <h3 className="text-xl font-semibold text-slate-900 mb-4">ROAS says &quot;win&quot; but margins are thinning</h3>
                 <p className="text-slate-600">
-                  You're celebrating high ROAS numbers while your actual profit margins shrink. The metrics lie.
+                  You&apos;re celebrating high ROAS numbers while your actual profit margins shrink. The metrics lie.
                 </p>
               </Card>
               <Card className="p-8 text-center border-2 border-slate-200 hover:border-yellow-200 transition-colors">
@@ -315,10 +315,10 @@ export default function GamalConsultingLanding() {
                   <Search className="w-8 h-8 text-yellow-600" />
                 </div>
                 <h3 className="text-xl font-semibold text-slate-900 mb-4">
-                  Google's PMax is a black box you can't break
+                  Google&apos;s PMax is a black box you can&apos;t break
                 </h3>
                 <p className="text-slate-600">
-                  Algorithms control your spend with zero transparency. You're flying blind on your biggest channel.
+                  Algorithms control your spend with zero transparency. You&apos;re flying blind on your biggest channel.
                 </p>
               </Card>
               <Card className="p-8 text-center border-2 border-slate-200 hover:border-blue-200 transition-colors">
@@ -326,10 +326,10 @@ export default function GamalConsultingLanding() {
                   <DollarSign className="w-8 h-8 text-blue-600" />
                 </div>
                 <h3 className="text-xl font-semibold text-slate-900 mb-4">
-                  Sales spike comes, but inventory and cashflow weren't ready
+                  Sales spike comes, but inventory and cashflow weren&apos;t ready
                 </h3>
                 <p className="text-slate-600">
-                  Your marketing works too well, but operations can't keep up. Success becomes a cash flow crisis.
+                  Your marketing works too well, but operations can&apos;t keep up. Success becomes a cash flow crisis.
                 </p>
               </Card>
             </div>
@@ -640,7 +640,7 @@ export default function GamalConsultingLanding() {
           <div className="text-center space-y-4 mb-16">
             <h2 className="text-4xl font-bold text-slate-900">Real Results</h2>
             <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-              Success stories from MENA e-commerce brands we've helped scale.
+              Success stories from MENA e-commerce brands we&apos;ve helped scale.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
@@ -745,12 +745,12 @@ export default function GamalConsultingLanding() {
                   <span className="text-sm text-slate-500">2 hours ago</span>
                 </div>
                 <CardTitle className="text-xl leading-tight">
-                  Meta's New AI Creative Tools Show 23% Better Performance
+                  Meta&apos;s New AI Creative Tools Show 23% Better Performance
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-slate-600 mb-4">
-                  Latest data reveals Meta's AI-powered creative optimization is delivering significant improvements in
+                  Latest data reveals Meta&apos;s AI-powered creative optimization is delivering significant improvements in
                   ROAS across e-commerce verticals...
                 </p>
                 <Button variant="outline" size="sm" className="w-full bg-transparent">
@@ -772,7 +772,7 @@ export default function GamalConsultingLanding() {
               </CardHeader>
               <CardContent>
                 <p className="text-slate-600 mb-4">
-                  Google's latest Performance Max updates are showing different results in MENA markets compared to
+                  Google&apos;s latest Performance Max updates are showing different results in MENA markets compared to
                   US/EU benchmarks...
                 </p>
                 <Button variant="outline" size="sm" className="w-full bg-transparent">
@@ -794,7 +794,7 @@ export default function GamalConsultingLanding() {
               </CardHeader>
               <CardContent>
                 <p className="text-slate-600 mb-4">
-                  Apple's latest privacy updates are reshaping attribution models. Here's how to adapt your measurement
+                  Apple&apos;s latest privacy updates are reshaping attribution models. Here&apos;s how to adapt your measurement
                   strategy...
                 </p>
                 <Button variant="outline" size="sm" className="w-full bg-transparent">
@@ -841,8 +841,8 @@ export default function GamalConsultingLanding() {
               </CardHeader>
               <CardContent>
                 <p className="text-slate-600 mb-6">
-                  After auditing 50+ MENA e-commerce accounts this year, I've seen the same pattern: brands celebrating
-                  4x ROAS while their profit margins shrink. Here's why traditional metrics are broken and what actually
+                  After auditing 50+ MENA e-commerce accounts this year, I&apos;ve seen the same pattern: brands celebrating
+                  4x ROAS while their profit margins shrink. Here&apos;s why traditional metrics are broken and what actually
                   matters...
                 </p>
                 <Button className="w-full bg-orange-500 hover:bg-orange-600 text-white">
@@ -870,7 +870,7 @@ export default function GamalConsultingLanding() {
               <CardContent>
                 <p className="text-slate-600 mb-6">
                   iOS updates, cookie deprecation, and regional privacy laws are creating a perfect storm for
-                  attribution in MENA markets. But there's a way forward using AI-powered modeling...
+                  attribution in MENA markets. But there&apos;s a way forward using AI-powered modeling...
                 </p>
                 <Button className="w-full bg-blue-500 hover:bg-blue-600 text-white">
                   Read Full Article
@@ -891,7 +891,7 @@ export default function GamalConsultingLanding() {
                   </div>
                 </div>
                 <CardTitle className="text-2xl leading-tight mb-4">
-                  Black Friday 2024: What Worked (And What Didn't) in GCC Markets
+                  Black Friday 2024: What Worked (And What Didn&apos;t) in GCC Markets
                 </CardTitle>
               </CardHeader>
               <CardContent>
@@ -923,7 +923,7 @@ export default function GamalConsultingLanding() {
               </CardHeader>
               <CardContent>
                 <p className="text-slate-600 mb-6">
-                  Most performance dashboards are vanity metric museums. Here's how to build a POAS-focused dashboard
+                  Most performance dashboards are vanity metric museums. Here&apos;s how to build a POAS-focused dashboard
                   that connects directly to your P&L and drives real business decisions...
                 </p>
                 <Button className="w-full bg-purple-500 hover:bg-purple-600 text-white">
@@ -1020,7 +1020,7 @@ export default function GamalConsultingLanding() {
 
                 {/* Fallback for when Cal.com doesn't load */}
                 <div className="text-center space-y-4 mt-6">
-                  <p className="text-slate-600">Can't see the calendar? Book directly:</p>
+                  <p className="text-slate-600">Can&apos;t see the calendar? Book directly:</p>
                   <Button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3">
                     <a
                       href="https://cal.com/gamal/poas-power-audit"
