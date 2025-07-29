@@ -299,7 +299,7 @@ export default function GamalConsultingLanding() {
       <section className="py-20 bg-slate-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl font-bold text-slate-900 mb-12 text-center">What's Keeping You Up?</h2>
+            <h2 className="text-4xl font-bold text-slate-900 mb-12 text-center">What&apos;s Keeping You Up?</h2>
             <div className="grid md:grid-cols-3 gap-8">
               <Card className="p-8 text-center border-2 border-slate-200 hover:border-red-200 transition-colors">
                 <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
