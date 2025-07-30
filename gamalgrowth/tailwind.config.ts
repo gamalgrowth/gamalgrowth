@@ -114,7 +114,7 @@ const config: Config = {
         },
         scroll: {
           "0%": { transform: "translateX(0)" },
-          "100%": { transform: "translateX(calc(-184px * 13))" },
+          "100%": { transform: "translateX(-2532px)" },
         },
       },
       animation: {
