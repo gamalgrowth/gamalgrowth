@@ -90,7 +90,7 @@ export default function GamalConsultingLanding() {
       <section className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden min-h-[700px]">
         {/* Large Transparent Photo Overlay */}
         <div className="absolute right-0 top-0 w-2/3 h-full opacity-25">
-          <img src="/images/gamal-photo.png" alt="Mohamed Gamal" className="w-full h-full object-cover object-left" />
+          <img src="/images/Gamal-photo.png" alt="Mohamed Gamal" className="w-full h-full object-cover object-left" />
         </div>
 
         {/* Content */}
@@ -188,101 +188,101 @@ export default function GamalConsultingLanding() {
             <div className="flex animate-scroll space-x-4">
               {/* First complete set */}
               <div className="flex-shrink-0 bg-orange-500 rounded-full px-8 py-4 min-w-[180px] flex items-center justify-center">
-                <img src="/logos/logo-01.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
+                <img src="/logos/01.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
               </div>
               <div className="flex-shrink-0 bg-orange-500 rounded-full px-8 py-4 min-w-[180px] flex items-center justify-center">
-                <img src="/logos/logo-02.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
+                <img src="/logos/02.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
               </div>
               <div className="flex-shrink-0 bg-orange-500 rounded-full px-8 py-4 min-w-[180px] flex items-center justify-center">
-                <img src="/logos/logo-03.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
+                <img src="/logos/03.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
               </div>
               <div className="flex-shrink-0 bg-orange-500 rounded-full px-8 py-4 min-w-[180px] flex items-center justify-center">
-                <img src="/logos/logo-04.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
+                <img src="/logos/04.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
               </div>
               <div className="flex-shrink-0 bg-orange-500 rounded-full px-8 py-4 min-w-[180px] flex items-center justify-center">
-                <img src="/logos/logo-05.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
+                <img src="/logos/05.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
               </div>
               <div className="flex-shrink-0 bg-orange-500 rounded-full px-8 py-4 min-w-[180px] flex items-center justify-center">
-                <img src="/logos/logo-06.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
+                <img src="/logos/06.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
               </div>
               <div className="flex-shrink-0 bg-orange-500 rounded-full px-8 py-4 min-w-[180px] flex items-center justify-center">
-                <img src="/logos/logo-07.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
+                <img src="/logos/07.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
               </div>
               <div className="flex-shrink-0 bg-orange-500 rounded-full px-8 py-4 min-w-[180px] flex items-center justify-center">
-                <img src="/logos/logo-08.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
+                <img src="/logos/08.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
               </div>
               <div className="flex-shrink-0 bg-orange-500 rounded-full px-8 py-4 min-w-[180px] flex items-center justify-center">
-                <img src="/logos/logo-09.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
+                <img src="/logos/09.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
               </div>
               <div className="flex-shrink-0 bg-orange-500 rounded-full px-8 py-4 min-w-[180px] flex items-center justify-center">
-                <img src="/logos/logo-10.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
+                <img src="/logos/10.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
               </div>
               <div className="flex-shrink-0 bg-orange-500 rounded-full px-8 py-4 min-w-[180px] flex items-center justify-center">
-                <img src="/logos/logo-11.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
+                <img src="/logos/11.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
               </div>
               <div className="flex-shrink-0 bg-orange-500 rounded-full px-8 py-4 min-w-[180px] flex items-center justify-center">
-                <img src="/logos/logo-12.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
+                <img src="/logos/12.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
               </div>
               <div className="flex-shrink-0 bg-orange-500 rounded-full px-8 py-4 min-w-[180px] flex items-center justify-center">
-                <img src="/logos/logo-13.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
+                <img src="/logos/13.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
               </div>
 
               {/* Second complete set for seamless loop */}
               <div className="flex-shrink-0 bg-orange-500 rounded-full px-8 py-4 min-w-[180px] flex items-center justify-center">
-                <img src="/logos/logo-01.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
+                <img src="/logos/01.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
               </div>
               <div className="flex-shrink-0 bg-orange-500 rounded-full px-8 py-4 min-w-[180px] flex items-center justify-center">
-                <img src="/logos/logo-02.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
+                <img src="/logos/02.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
               </div>
               <div className="flex-shrink-0 bg-orange-500 rounded-full px-8 py-4 min-w-[180px] flex items-center justify-center">
-                <img src="/logos/logo-03.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
+                <img src="/logos/03.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
               </div>
               <div className="flex-shrink-0 bg-orange-500 rounded-full px-8 py-4 min-w-[180px] flex items-center justify-center">
-                <img src="/logos/logo-04.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
+                <img src="/logos/04.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
               </div>
               <div className="flex-shrink-0 bg-orange-500 rounded-full px-8 py-4 min-w-[180px] flex items-center justify-center">
-                <img src="/logos/logo-05.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
+                <img src="/logos/05.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
               </div>
               <div className="flex-shrink-0 bg-orange-500 rounded-full px-8 py-4 min-w-[180px] flex items-center justify-center">
-                <img src="/logos/logo-06.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
+                <img src="/logos/06.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
               </div>
               <div className="flex-shrink-0 bg-orange-500 rounded-full px-8 py-4 min-w-[180px] flex items-center justify-center">
-                <img src="/logos/logo-07.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
+                <img src="/logos/07.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
               </div>
               <div className="flex-shrink-0 bg-orange-500 rounded-full px-8 py-4 min-w-[180px] flex items-center justify-center">
-                <img src="/logos/logo-08.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
+                <img src="/logos/08.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
               </div>
               <div className="flex-shrink-0 bg-orange-500 rounded-full px-8 py-4 min-w-[180px] flex items-center justify-center">
-                <img src="/logos/logo-09.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
+                <img src="/logos/09.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
               </div>
               <div className="flex-shrink-0 bg-orange-500 rounded-full px-8 py-4 min-w-[180px] flex items-center justify-center">
-                <img src="/logos/logo-10.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
+                <img src="/logos/10.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
               </div>
               <div className="flex-shrink-0 bg-orange-500 rounded-full px-8 py-4 min-w-[180px] flex items-center justify-center">
-                <img src="/logos/logo-11.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
+                <img src="/logos/11.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
               </div>
               <div className="flex-shrink-0 bg-orange-500 rounded-full px-8 py-4 min-w-[180px] flex items-center justify-center">
-                <img src="/logos/logo-12.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
+                <img src="/logos/12.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
               </div>
               <div className="flex-shrink-0 bg-orange-500 rounded-full px-8 py-4 min-w-[180px] flex items-center justify-center">
-                <img src="/logos/logo-13.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
+                <img src="/logos/13.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
               </div>
 
               {/* Third set to ensure perfect seamless loop */}
               <div className="flex-shrink-0 bg-orange-500 rounded-full px-8 py-4 min-w-[180px] flex items-center justify-center">
-                <img src="/logos/logo-01.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
+                <img src="/logos/01.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
               </div>
               <div className="flex-shrink-0 bg-orange-500 rounded-full px-8 py-4 min-w-[180px] flex items-center justify-center">
-                <img src="/logos/logo-02.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
+                <img src="/logos/02.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
               </div>
               <div className="flex-shrink-0 bg-orange-500 rounded-full px-8 py-4 min-w-[180px] flex items-center justify-center">
-                <img src="/logos/logo-03.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
+                <img src="/logos/03.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
               </div>
               <div className="flex-shrink-0 bg-orange-500 rounded-full px-8 py-4 min-w-[180px] flex items-center justify-center">
-                <img src="/logos/logo-04.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
+                <img src="/logos/04.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
               </div>
               <div className="flex-shrink-0 bg-orange-500 rounded-full px-8 py-4 min-w-[180px] flex items-center justify-center">
-                <img src="/logos/logo-05.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
+                <img src="/logos/05.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
               </div>
             </div>
           </div>
@@ -321,7 +321,7 @@ export default function GamalConsultingLanding() {
                   Algorithms control your spend with zero transparency. You&apos;re flying blind on your biggest channel.
                 </p>
               </Card>
-              <Card className="p-8 text-center border-2 border-slate-200 hover:border-blue-200 transition-colors">
+              <Card className="p-8 text-center border-2 border-blue-200 hover:border-blue-200 transition-colors">
                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
                   <DollarSign className="w-8 h-8 text-blue-600" />
                 </div>
