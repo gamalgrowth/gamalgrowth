@@ -90,7 +90,7 @@ export default function GamalConsultingLanding() {
       <section className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden min-h-[700px]">
         {/* Large Transparent Photo Overlay */}
         <div className="absolute right-0 top-0 w-2/3 h-full opacity-25">
-          <img src="/images/Gamal-photo.png" alt="Mohamed Gamal" className="w-full h-full object-contain object-center" />
+          <img src="/images/Gamal-photo.png" alt="Mohamed Gamal" className="w-full h-full object-cover object-top scale-75" />
         </div>
 
         {/* Content */}
@@ -266,23 +266,6 @@ export default function GamalConsultingLanding() {
               </div>
               <div className="flex-shrink-0 bg-orange-500 rounded-full px-8 py-4 min-w-[180px] flex items-center justify-center">
                 <img src="/logos/13.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
-              </div>
-
-              {/* Third set to ensure perfect seamless loop */}
-              <div className="flex-shrink-0 bg-orange-500 rounded-full px-8 py-4 min-w-[180px] flex items-center justify-center">
-                <img src="/logos/01.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
-              </div>
-              <div className="flex-shrink-0 bg-orange-500 rounded-full px-8 py-4 min-w-[180px] flex items-center justify-center">
-                <img src="/logos/02.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
-              </div>
-              <div className="flex-shrink-0 bg-orange-500 rounded-full px-8 py-4 min-w-[180px] flex items-center justify-center">
-                <img src="/logos/03.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
-              </div>
-              <div className="flex-shrink-0 bg-orange-500 rounded-full px-8 py-4 min-w-[180px] flex items-center justify-center">
-                <img src="/logos/04.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
-              </div>
-              <div className="flex-shrink-0 bg-orange-500 rounded-full px-8 py-4 min-w-[180px] flex items-center justify-center">
-                <img src="/logos/05.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
               </div>
             </div>
           </div>
