@@ -90,7 +90,7 @@ export default function GamalConsultingLanding() {
       <section className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden min-h-[700px]">
         {/* Large Transparent Photo Overlay */}
         <div className="absolute top-0 left-0 w-full h-full opacity-25">
-          <img src="/images/Gamal-photo.png" alt="Mohamed Gamal" className="w-full h-full object-cover object-center scale-90" />
+          <img src="/images/Gamal-photo.png" alt="Mohamed Gamal" className="w-auto h-full object-contain object-bottom" />
         </div>
 
         {/* Content */}
