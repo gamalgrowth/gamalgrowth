@@ -89,8 +89,8 @@ export default function GamalConsultingLanding() {
       {/* Hero Banner Section */}
       <section className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden min-h-[700px]">
         {/* Large Transparent Photo Overlay */}
-        <div className="absolute right-0 top-0 w-2/3 h-full opacity-25">
-          <img src="/images/Gamal-photo.png" alt="Mohamed Gamal" className="w-full h-full object-cover object-left" />
+        <div className="absolute top-0 left-0 w-full h-full opacity-25">
+          <img src="/images/Gamal-photo.png" alt="Mohamed Gamal" className="w-full h-full object-cover object-center scale-90" />
         </div>
 
         {/* Content */}
@@ -184,8 +184,8 @@ export default function GamalConsultingLanding() {
           </div>
 
           {/* Scrolling Brands Container */}
-          <div className="relative overflow-hidden">
-            <div className="flex animate-scroll space-x-4">
+          <div className="relative overflow-hidden pointer-events-none">
+            <div className="flex animate-infinite-scroll space-x-4">
               {/* First complete set */}
               <div className="flex-shrink-0 bg-orange-500 rounded-full px-8 py-4 min-w-[180px] flex items-center justify-center">
                 <img src="/logos/01.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
