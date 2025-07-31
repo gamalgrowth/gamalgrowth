@@ -89,8 +89,8 @@ export default function GamalConsultingLanding() {
       {/* Hero Banner Section */}
       <section className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden min-h-[700px]">
         {/* Large Transparent Photo Overlay */}
-        <div className="absolute right-0 top-0 w-1/2 h-full opacity-25">
-          <img src="/images/Gamal-photo.png" alt="Mohamed Gamal" className="w-full h-full object-cover object-bottom object-right" />
+        <div className="absolute right-0 top-0 w-full md:w-1/2 h-full opacity-25">
+          <img src="/images/Gamal-photo.png" alt="Mohamed Gamal" className="w-full h-full object-cover object-right" />
         </div>
 
         {/* Content */}
