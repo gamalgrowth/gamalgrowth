@@ -6,17 +6,33 @@ export async function POST(request: NextRequest) {
     apiVersion: "2025-06-30.basil",
   })
   try {
-    const { priceId, productName, successUrl, cancelUrl } = await request.json()
+    const { lookupKey, productName, successUrl, cancelUrl } = await request.json()
+
+    // Find the Stripe Price object using the lookup_key
+    const prices = await stripe.prices.list({
+      lookup_keys: [lookupKey],
+      expand: ["data.product"],
+      active: true,
+    })
+
+    if (!prices.data.length) {
+      return NextResponse.json({ error: "Price not found" }, { status: 404 })
+    }
+
+    const price = prices.data[0]
+
+    // Determine mode based on product type or price properties (e.g., recurring)
+    const mode = price.type === "recurring" ? "subscription" : "payment"
 
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ["card"],
       line_items: [
         {
-          price: priceId,
+          price: price.id,
           quantity: 1,
         },
       ],
-      mode: priceId === "price_fractional_retainer" ? "subscription" : "payment",
+      mode: mode,
       success_url: successUrl,
       cancel_url: cancelUrl,
       metadata: {
@@ -25,7 +41,7 @@ export async function POST(request: NextRequest) {
       customer_email: undefined, // Will be collected during checkout
       billing_address_collection: "required",
       shipping_address_collection: {
-        allowed_countries: ["AE", "SA", "KW", "QA", "BH", "OM", "EG", "JO", "LB", "US", "GB", "CA"],
+        allowed_countries: ["AE", "SA", "KW", "QA", "BH", "OM", "EG", "JO", "LB"],
       },
       allow_promotion_codes: true,
       automatic_tax: {
