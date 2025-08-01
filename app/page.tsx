@@ -24,6 +24,7 @@ import {
 } from "lucide-react"
 
 export default function GamalConsultingLanding() {
+  // Force deployment update - orange contact section completely removed
   const handleStripePayment = async (lookupKey: string, productName: string) => {
     try {
       const response = await fetch("/api/create-checkout-session", {
