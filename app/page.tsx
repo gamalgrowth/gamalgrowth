@@ -22,11 +22,9 @@ import {
   LineChart,
   CreditCard,
 } from "lucide-react"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { Textarea } from "@/components/ui/textarea"
 
 export default function GamalConsultingLanding() {
+  // Force deployment update - orange contact section completely removed
   const handleStripePayment = async (lookupKey: string, productName: string) => {
     try {
       const response = await fetch("/api/create-checkout-session", {
@@ -140,7 +138,7 @@ export default function GamalConsultingLanding() {
                   className="bg-orange-500 hover:bg-orange-600 text-white px-12 py-6 text-xl font-semibold rounded-xl shadow-xl hover:shadow-2xl transition-all cursor-pointer"
                 >
                   <CreditCard className="mr-3 w-6 h-6" />
-                  Book a One-Hour Strategy Call - AED 1,200
+                  Book a One-Hour Strategy Call - AED 999
                   <ArrowRight className="ml-3 w-6 h-6" />
                 </Button>
                 <p className="text-sm text-slate-400 flex items-center space-x-2">
@@ -1015,105 +1013,6 @@ export default function GamalConsultingLanding() {
               View All Articles
               <ArrowRight className="ml-2 w-4 h-4" />
             </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* Lead Capture Form with Cal.com Integration */}
-      <section id="contact" className="py-20 bg-orange-500">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center space-y-4 mb-12">
-              <h2 className="text-4xl font-bold text-white">Ready for Profit-Fuel?</h2>
-              <p className="text-xl text-orange-100">
-                I open just 2 audit slots per month. Book your POAS Power Audit call directly - no pitch, just clarity
-                and peace of mind.
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              {/* Left side - Contact form for initial info */}
-              <Card className="bg-white">
-                <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold text-slate-900 mb-6">Tell Me About Your Business</h3>
-                  <form className="space-y-6">
-                    <div className="space-y-2">
-                      <Label htmlFor="name">Name</Label>
-                      <Input id="name" placeholder="Your full name" />
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="email">Email</Label>
-                      <Input id="email" type="email" placeholder="your@email.com" />
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="website">Website URL</Label>
-                      <Input id="website" placeholder="https://yourwebsite.com" />
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="revenue">Monthly Revenue Range</Label>
-                      <select className="w-full px-3 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500">
-                        <option>Select range...</option>
-                        <option>$50K - $100K</option>
-                        <option>$100K - $500K</option>
-                        <option>$500K - $1M</option>
-                        <option>$1M+</option>
-                      </select>
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="challenge">Biggest Performance Marketing Challenge</Label>
-                      <Textarea
-                        id="challenge"
-                        placeholder="What's keeping you up at night? ROAS vs profit issues, attribution problems, scaling challenges..."
-                        rows={4}
-                      />
-                    </div>
-                    {/* Removed CalPopupButton */}
-                  </form>
-                </CardContent>
-              </Card>
-
-              {/* Right side - Cal.com embed */}
-              <div className="bg-white rounded-lg p-8">
-                <h3 className="text-2xl font-bold text-slate-900 mb-6 text-center">Book Your POAS Power Audit</h3>
-
-                {/* Cal.com Inline Widget */}
-                {/* Removed CalInlineEmbed */}
-
-                {/* Fallback for when Cal.com doesn't load */}
-                <div className="text-center space-y-4 mt-6">
-                  <p className="text-slate-600">Can&apos;t see the calendar? Book directly:</p>
-                  <Button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3">
-                    <a
-                      href="https://cal.com/gamal/poas-power-audit"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center"
-                    >
-                      Open Cal.com
-                      <ArrowRight className="ml-2 w-4 h-4" />
-                    </a>
-                  </Button>
-                </div>
-              </div>
-            </div>
-
-            {/* Trust indicators */}
-            <div className="mt-16 text-center">
-              <div className="grid md:grid-cols-3 gap-8 text-white">
-                <div className="space-y-2">
-                  <div className="text-3xl font-bold">30 min</div>
-                  <div className="text-orange-100">Deep-dive audit call</div>
-                </div>
-                <div className="space-y-2">
-                  <div className="text-3xl font-bold">AED 9,175</div>
-                  <div className="text-orange-100">Value delivered in one call</div>
-                </div>
-                <div className="space-y-2">
-                  <div className="text-3xl font-bold">2 slots</div>
-                  <div className="text-orange-100">Available per month</div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
