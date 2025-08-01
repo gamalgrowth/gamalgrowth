@@ -53,6 +53,245 @@ export default function GamalConsultingLanding() {
     }
   }
 
+  const servicesSection = (
+    <section id="services" className="py-20 bg-white">
+      <div className="container mx-auto px-4">
+        <div className="text-center space-y-4 mb-16">
+          <h2 className="text-4xl font-bold text-slate-900">My Services</h2>
+          <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+            Choose the right solution for your business growth stage and needs. Secure payments via Stripe.
+          </p>
+        </div>
+        <div className="grid md:grid-cols-3 gap-8">
+          {/* POAS Power Audit */}
+          <Card className="border-2 border-slate-200 hover:border-orange-300 transition-all duration-300 hover:shadow-xl">
+            <CardHeader className="text-center pb-4">
+              <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Search className="w-8 h-8 text-orange-600" />
+              </div>
+              <CardTitle className="text-2xl text-slate-900">POAS Power Audit</CardTitle>
+              <div className="text-3xl font-bold text-orange-600 mt-2">AED 9,175</div>
+              <CardDescription className="text-slate-600 mt-4">
+                2 weeks to surface profit leaks & misallocated spend
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="space-y-6">
+              <div className="space-y-3">
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="w-5 h-5 text-green-500" />
+                  <span className="text-slate-700">Complete ad account audit</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="w-5 h-5 text-green-500" />
+                  <span className="text-slate-700">Profit leak identification</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="w-5 h-5 text-green-500" />
+                  <span className="text-slate-700">POAS vs ROAS analysis</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="w-5 h-5 text-green-500" />
+                  <span className="text-slate-700">Actionable recommendations</span>
+                </div>
+              </div>
+              <Button
+                onClick={() => handleStripePayment("poas_power_audit", "POAS Power Audit")}
+                className="w-full bg-orange-500 hover:bg-orange-600 text-white"
+              >
+                <CreditCard className="mr-2 w-4 h-4" />
+                Pay Now - AED 9,175
+                <ArrowRight className="ml-2 w-4 h-4" />
+              </Button>
+              <div className="text-center">
+                <Badge variant="secondary" className="bg-orange-100 text-orange-700">
+                  <Clock className="w-3 h-3 mr-1" />2 slots/month
+                </Badge>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* 90-Day Growth Sprint */}
+          <Card className="border-2 border-orange-300 hover:border-orange-400 transition-all duration-300 hover:shadow-xl relative">
+            <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+              <Badge className="bg-orange-500 text-white px-4 py-1">Most Popular</Badge>
+            </div>
+            <CardHeader className="text-center pb-4">
+              <div className="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Zap className="w-8 h-8 text-white" />
+              </div>
+              <CardTitle className="text-2xl text-slate-900">90-Day Growth Sprint</CardTitle>
+              <div className="text-3xl font-bold text-orange-600 mt-2">AED 55,050</div>
+              <CardDescription className="text-slate-600 mt-4">
+                AI systems, creative loops, channel cleanup
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="space-y-6">
+              <div className="space-y-3">
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="w-5 h-5 text-green-500" />
+                  <span className="text-slate-700">AI-driven performance systems</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="w-5 h-5 text-green-500" />
+                  <span className="text-slate-700">Creative optimization loops</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="w-5 h-5 text-green-500" />
+                  <span className="text-slate-700">Multi-channel cleanup</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="w-5 h-5 text-green-500" />
+                  <span className="text-slate-700">Weekly performance reviews</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="w-5 h-5 text-green-500" />
+                  <span className="text-slate-700">P&L integration setup</span>
+                </div>
+              </div>
+              <Button
+                onClick={() => handleStripePayment("ninety_day_growth_sprint", "90-Day Growth Sprint")}
+                className="w-full bg-orange-500 hover:bg-orange-600 text-white"
+              >
+                <CreditCard className="mr-2 w-4 h-4" />
+                Pay Now - AED 55,050
+                <ArrowRight className="ml-2 w-4 h-4" />
+              </Button>
+              <div className="text-center">
+                <Badge variant="secondary" className="bg-green-100 text-green-700">
+                  <TrendingUp className="w-3 h-3 mr-1" />
+                  25% avg ROAS lift
+                </Badge>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Fractional Retainer */}
+          <Card className="border-2 border-slate-200 hover:border-orange-300 transition-all duration-300 hover:shadow-xl">
+            <CardHeader className="text-center pb-4">
+              <div className="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Shield className="w-8 h-8 text-slate-600" />
+              </div>
+              <CardTitle className="text-2xl text-slate-900">Fractional Retainer</CardTitle>
+              <div className="text-3xl font-bold text-slate-600 mt-2">AED 29,360/mo</div>
+              <CardDescription className="text-slate-600 mt-4">
+                Own your KPIs weekly, no juniors, no fluff
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="space-y-6">
+              <div className="space-y-3">
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="w-5 h-5 text-green-500" />
+                  <span className="text-slate-700">Weekly KPI ownership</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="w-5 h-5 text-green-500" />
+                  <span className="text-slate-700">Direct access to Gamal</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="w-5 h-5 text-green-500" />
+                  <span className="text-slate-700">Strategic planning & execution</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="w-5 h-5 text-green-500" />
+                  <span className="text-slate-700">Monthly strategy sessions</span>
+                </div>
+              </div>
+              <Button
+                onClick={() => handleStripePayment("fractional_retainer_monthly", "Fractional Retainer")}
+                className="w-full bg-slate-600 hover:bg-slate-700 text-white"
+              >
+                <CreditCard className="mr-2 w-4 h-4" />
+                Subscribe - AED 29,360/mo
+                <ArrowRight className="ml-2 w-4 h-4" />
+              </Button>
+              <div className="text-center">
+                <Badge variant="secondary" className="bg-slate-100 text-slate-700">
+                  <Users className="w-3 h-3 mr-1" />
+                  Limited availability
+                </Badge>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* Payment Security Notice */}
+        <div className="mt-16 text-center">
+          <div className="inline-flex items-center space-x-2 bg-slate-50 px-6 py-3 rounded-lg">
+            <Shield className="w-5 h-5 text-green-600" />
+            <span className="text-slate-700 font-medium">Secure payments powered by Stripe</span>
+            <div className="flex space-x-2 ml-4">
+              <div className="w-8 h-5 bg-blue-600 rounded text-white text-xs flex items-center justify-center font-bold">
+                VISA
+              </div>
+              <div className="w-8 h-5 bg-red-600 rounded text-white text-xs flex items-center justify-center font-bold">
+                MC
+              </div>
+              <div className="w-8 h-5 bg-blue-500 rounded text-white text-xs flex items-center justify-center font-bold">
+                AMEX
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+
+  const whatIBringSection = (
+    <section className="py-20 bg-slate-900">
+      <div className="container mx-auto px-4">
+        <div className="text-center space-y-4 mb-16">
+          <h2 className="text-4xl font-bold text-white">What I Bring:</h2>
+          <p className="text-xl text-slate-300 max-w-2xl mx-auto">
+            14 years of proven expertise in scaling MENA e-commerce brands with real, measurable results.
+          </p>
+        </div>
+        <div className="grid md:grid-cols-3 gap-8">
+          <Card className="bg-slate-800 border-slate-700 p-8">
+            <CardContent className="p-0 text-center">
+              <div className="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                <BarChart3 className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-4">14 Years</h3>
+              <p className="text-slate-300 text-lg leading-relaxed">
+                Scaling GCC e-commerce
+                <br />
+                <span className="text-orange-400">(ex-Director of Growth, GMG)</span>
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-slate-800 border-slate-700 p-8">
+            <CardContent className="p-0 text-center">
+              <div className="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                <DollarSign className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-4">$100M+</h3>
+              <p className="text-slate-300 text-lg leading-relaxed">
+                Managed ad spend
+                <br />
+                <span className="text-orange-400">(25% avg. ROAS lift in 6 months)</span>
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-slate-800 border-slate-700 p-8">
+            <CardContent className="p-0 text-center">
+              <div className="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Target className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-4">Live Dashboards</h3>
+              <p className="text-slate-300 text-lg leading-relaxed">
+                Linked to (finance)
+                <br />
+                <span className="text-orange-400">not just clicks</span>
+              </p>
+            </CardContent>
+          </Card>
+        </div>
+      </div>
+    </section>
+  )
+
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
@@ -314,298 +553,84 @@ export default function GamalConsultingLanding() {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <div className="text-center space-y-4 mb-16">
-              <h2 className="text-4xl font-bold text-slate-900">The Solution? POAS + AI + P&L Integration</h2>
-              <p className="text-xl text-slate-600">Stop optimizing for vanity metrics. Start optimizing for profit.</p>
-            </div>
+            <h2 className="text-4xl font-bold text-slate-900 mb-12 text-center">What I Bring:</h2>
             <div className="grid md:grid-cols-3 gap-8">
-              <Card className="p-8 text-center border-2 border-green-200 bg-green-50">
-                <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Calculator className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-slate-900 mb-4">POAS Clarity</h3>
-                <p className="text-slate-600 mb-4">
-                  Profit on Ad Spend reveals what ROAS hides. See which campaigns actually make you money.
-                </p>
-                <div className="text-sm text-green-700 font-semibold">
-                  ✓ True profit visibility
-                  <br />✓ Margin-aware optimization
-                  <br />✓ Real business impact
-                </div>
+              <Card className="bg-white border-0 shadow-lg">
+                <CardHeader>
+                  <div className="flex items-center space-x-4 mb-4">
+                    <div className="w-12 h-12 bg-slate-200 rounded-lg flex items-center justify-center">
+                      <Users className="w-6 h-6 text-slate-600" />
+                    </div>
+                    <div>
+                      <div className="text-sm text-slate-500">14+ years MENA e-commerce experience</div>
+                      <div className="font-semibold text-slate-900">Direct hands-on experience</div>
+                    </div>
+                  </div>
+                  <CardTitle className="text-xl leading-tight">
+                    <DollarSign className="w-6 h-6 text-slate-600 mr-2" />
+                    $100M+ combined ad spend managed
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-slate-600 mb-4">
+                    Proven track record of delivering tangible growth across various MENA markets, from GCC to Levant.
+                  </p>
+                </CardContent>
               </Card>
 
-              <Card className="p-8 text-center border-2 border-orange-200 bg-orange-50">
-                <div className="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Brain className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-slate-900 mb-4">AI-Driven Systems</h3>
-                <p className="text-slate-600 mb-4">
-                  Break through algorithm black boxes with AI that learns your business patterns and predicts
-                  performance.
-                </p>
-                <div className="text-sm text-orange-700 font-semibold">
-                  ✓ Predictive optimization
-                  <br />✓ Pattern recognition
-                  <br />✓ Automated insights
-                </div>
+              <Card className="bg-white border-0 shadow-lg">
+                <CardHeader>
+                  <div className="flex items-center space-x-4 mb-4">
+                    <div className="w-12 h-12 bg-slate-200 rounded-lg flex items-center justify-center">
+                      <Brain className="w-6 h-6 text-slate-600" />
+                    </div>
+                    <div>
+                      <div className="text-sm text-slate-500">AI-Driven Systems</div>
+                      <div className="font-semibold text-slate-900">Breaking algorithm black boxes</div>
+                    </div>
+                  </div>
+                  <CardTitle className="text-xl leading-tight">
+                    <Zap className="w-6 h-6 text-slate-600 mr-2" />
+                    ROI-focused optimization
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-slate-600 mb-4">
+                    Leveraging advanced AI to predict and optimize performance, ensuring maximum return on investment.
+                  </p>
+                </CardContent>
               </Card>
 
-              <Card className="p-8 text-center border-2 border-blue-200 bg-blue-50">
-                <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <LineChart className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-slate-900 mb-4">P&L Integration</h3>
-                <p className="text-slate-600 mb-4">
-                  Connect marketing spend directly to your financial statements. Plan inventory and cash flow around
-                  performance.
-                </p>
-                <div className="text-sm text-blue-700 font-semibold">
-                  ✓ Financial forecasting
-                  <br />✓ Inventory planning
-                  <br />✓ Cash flow optimization
-                </div>
+              <Card className="bg-white border-0 shadow-lg">
+                <CardHeader>
+                  <div className="flex items-center space-x-4 mb-4">
+                    <div className="w-12 h-12 bg-slate-200 rounded-lg flex items-center justify-center">
+                      <LineChart className="w-6 h-6 text-slate-600" />
+                    </div>
+                    <div>
+                      <div className="text-sm text-slate-500">P&L Integration</div>
+                      <div className="font-semibold text-slate-900">Connecting marketing to financials</div>
+                    </div>
+                  </div>
+                  <CardTitle className="text-xl leading-tight">
+                    <DollarSign className="w-6 h-6 text-slate-600 mr-2" />
+                    Profit-driven approach
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-slate-600 mb-4">
+                    Focused on maximizing profit, not just vanity metrics, ensuring sustainable growth.
+                  </p>
+                </CardContent>
               </Card>
             </div>
           </div>
         </div>
       </section>
 
-      {/* What I Bring Section */}
-      <section className="py-20 bg-slate-900">
-        <div className="container mx-auto px-4">
-          <div className="text-center space-y-4 mb-16">
-            <h2 className="text-4xl font-bold text-white">What I Bring:</h2>
-            <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-              14 years of proven expertise in scaling MENA e-commerce brands with real, measurable results.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card className="bg-slate-800 border-slate-700 p-8">
-              <CardContent className="p-0 text-center">
-                <div className="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <BarChart3 className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-4">14 Years</h3>
-                <p className="text-slate-300 text-lg leading-relaxed">
-                  Scaling GCC e-commerce
-                  <br />
-                  <span className="text-orange-400">(ex-Director of Growth, GMG)</span>
-                </p>
-              </CardContent>
-            </Card>
+      {servicesSection}
 
-            <Card className="bg-slate-800 border-slate-700 p-8">
-              <CardContent className="p-0 text-center">
-                <div className="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <DollarSign className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-4">$100M+</h3>
-                <p className="text-slate-300 text-lg leading-relaxed">
-                  Managed ad spend
-                  <br />
-                  <span className="text-orange-400">(25% avg. ROAS lift in 6 months)</span>
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-slate-800 border-slate-700 p-8">
-              <CardContent className="p-0 text-center">
-                <div className="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Target className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-4">Live Dashboards</h3>
-                <p className="text-slate-300 text-lg leading-relaxed">
-                  Linked to (finance)
-                  <br />
-                  <span className="text-orange-400">not just clicks</span>
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Services as SaaS Products with Stripe Integration */}
-      <section id="services" className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center space-y-4 mb-16">
-            <h2 className="text-4xl font-bold text-slate-900">Our Products</h2>
-            <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-              Choose the right solution for your business growth stage and needs. Secure payments via Stripe.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            {/* POAS Power Audit */}
-            <Card className="border-2 border-slate-200 hover:border-orange-300 transition-all duration-300 hover:shadow-xl">
-              <CardHeader className="text-center pb-4">
-                <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Search className="w-8 h-8 text-orange-600" />
-                </div>
-                <CardTitle className="text-2xl text-slate-900">POAS Power Audit</CardTitle>
-                <div className="text-3xl font-bold text-orange-600 mt-2">AED 9,175</div>
-                <CardDescription className="text-slate-600 mt-4">
-                  2 weeks to surface profit leaks & misallocated spend
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="space-y-6">
-                <div className="space-y-3">
-                  <div className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-green-500" />
-                    <span className="text-slate-700">Complete ad account audit</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-green-500" />
-                    <span className="text-slate-700">Profit leak identification</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-green-500" />
-                    <span className="text-slate-700">POAS vs ROAS analysis</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-green-500" />
-                    <span className="text-slate-700">Actionable recommendations</span>
-                  </div>
-                </div>
-                <Button
-                  onClick={() => handleStripePayment("poas_power_audit", "POAS Power Audit")}
-                  className="w-full bg-orange-500 hover:bg-orange-600 text-white"
-                >
-                  <CreditCard className="mr-2 w-4 h-4" />
-                  Pay Now - AED 9,175
-                  <ArrowRight className="ml-2 w-4 h-4" />
-                </Button>
-                <div className="text-center">
-                  <Badge variant="secondary" className="bg-orange-100 text-orange-700">
-                    <Clock className="w-3 h-3 mr-1" />2 slots/month
-                  </Badge>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* 90-Day Growth Sprint */}
-            <Card className="border-2 border-orange-300 hover:border-orange-400 transition-all duration-300 hover:shadow-xl relative">
-              <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                <Badge className="bg-orange-500 text-white px-4 py-1">Most Popular</Badge>
-              </div>
-              <CardHeader className="text-center pb-4">
-                <div className="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Zap className="w-8 h-8 text-white" />
-                </div>
-                <CardTitle className="text-2xl text-slate-900">90-Day Growth Sprint</CardTitle>
-                <div className="text-3xl font-bold text-orange-600 mt-2">AED 55,050</div>
-                <CardDescription className="text-slate-600 mt-4">
-                  AI systems, creative loops, channel cleanup
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="space-y-6">
-                <div className="space-y-3">
-                  <div className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-green-500" />
-                    <span className="text-slate-700">AI-driven performance systems</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-green-500" />
-                    <span className="text-slate-700">Creative optimization loops</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-green-500" />
-                    <span className="text-slate-700">Multi-channel cleanup</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-green-500" />
-                    <span className="text-slate-700">Weekly performance reviews</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-green-500" />
-                    <span className="text-slate-700">P&L integration setup</span>
-                  </div>
-                </div>
-                <Button
-                  onClick={() => handleStripePayment("ninety_day_growth_sprint", "90-Day Growth Sprint")}
-                  className="w-full bg-orange-500 hover:bg-orange-600 text-white"
-                >
-                  <CreditCard className="mr-2 w-4 h-4" />
-                  Pay Now - AED 55,050
-                  <ArrowRight className="ml-2 w-4 h-4" />
-                </Button>
-                <div className="text-center">
-                  <Badge variant="secondary" className="bg-green-100 text-green-700">
-                    <TrendingUp className="w-3 h-3 mr-1" />
-                    25% avg ROAS lift
-                  </Badge>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Fractional Retainer */}
-            <Card className="border-2 border-slate-200 hover:border-orange-300 transition-all duration-300 hover:shadow-xl">
-              <CardHeader className="text-center pb-4">
-                <div className="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Shield className="w-8 h-8 text-slate-600" />
-                </div>
-                <CardTitle className="text-2xl text-slate-900">Fractional Retainer</CardTitle>
-                <div className="text-3xl font-bold text-slate-600 mt-2">AED 29,360/mo</div>
-                <CardDescription className="text-slate-600 mt-4">
-                  Own your KPIs weekly, no juniors, no fluff
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="space-y-6">
-                <div className="space-y-3">
-                  <div className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-green-500" />
-                    <span className="text-slate-700">Weekly KPI ownership</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-green-500" />
-                    <span className="text-slate-700">Direct access to Gamal</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-green-500" />
-                    <span className="text-slate-700">Strategic planning & execution</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-green-500" />
-                    <span className="text-slate-700">Monthly strategy sessions</span>
-                  </div>
-                </div>
-                <Button
-                  onClick={() => handleStripePayment("fractional_retainer_monthly", "Fractional Retainer")}
-                  className="w-full bg-slate-600 hover:bg-slate-700 text-white"
-                >
-                  <CreditCard className="mr-2 w-4 h-4" />
-                  Subscribe - AED 29,360/mo
-                  <ArrowRight className="ml-2 w-4 h-4" />
-                </Button>
-                <div className="text-center">
-                  <Badge variant="secondary" className="bg-slate-100 text-slate-700">
-                    <Users className="w-3 h-3 mr-1" />
-                    Limited availability
-                  </Badge>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-
-          {/* Payment Security Notice */}
-          <div className="mt-16 text-center">
-            <div className="inline-flex items-center space-x-2 bg-slate-50 px-6 py-3 rounded-lg">
-              <Shield className="w-5 h-5 text-green-600" />
-              <span className="text-slate-700 font-medium">Secure payments powered by Stripe</span>
-              <div className="flex space-x-2 ml-4">
-                <div className="w-8 h-5 bg-blue-600 rounded text-white text-xs flex items-center justify-center font-bold">
-                  VISA
-                </div>
-                <div className="w-8 h-5 bg-red-600 rounded text-white text-xs flex items-center justify-center font-bold">
-                  MC
-                </div>
-                <div className="w-8 h-5 bg-blue-500 rounded text-white text-xs flex items-center justify-center font-bold">
-                  AMEX
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      {whatIBringSection}
 
       {/* Case Studies Section */}
       <section id="results" className="py-20 bg-slate-50">
