@@ -1016,65 +1016,6 @@ export default function GamalConsultingLanding() {
         </div>
       </section>
 
-      {/* Lead Capture Form with Cal.com Integration */}
-      <section id="contact" className="py-20 bg-orange-500">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center space-y-4 mb-12">
-              <h2 className="text-4xl font-bold text-white">Ready for Profit-Fuel?</h2>
-              <p className="text-xl text-orange-100">
-                I open just 2 audit slots per month. Book your POAS Power Audit call directly - no pitch, just clarity
-                and peace of mind.
-              </p>
-            </div>
-
-            <div className="max-w-2xl mx-auto">
-              {/* Cal.com booking section - centered */}
-              <div className="bg-white rounded-lg p-8">
-                <h3 className="text-2xl font-bold text-slate-900 mb-6 text-center">Book Your POAS Power Audit</h3>
-
-                {/* Cal.com Inline Widget */}
-                {/* Removed CalInlineEmbed */}
-
-                {/* Fallback for when Cal.com doesn't load */}
-                <div className="text-center space-y-4 mt-6">
-                  <p className="text-slate-600">Can&apos;t see the calendar? Book directly:</p>
-                  <Button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3">
-                    <a
-                      href="https://cal.com/gamal/poas-power-audit"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center"
-                    >
-                      Open Cal.com
-                      <ArrowRight className="ml-2 w-4 h-4" />
-                    </a>
-                  </Button>
-                </div>
-              </div>
-            </div>
-
-            {/* Trust indicators */}
-            <div className="mt-16 text-center">
-              <div className="grid md:grid-cols-3 gap-8 text-white">
-                <div className="space-y-2">
-                  <div className="text-3xl font-bold">30 min</div>
-                  <div className="text-orange-100">Deep-dive audit call</div>
-                </div>
-                <div className="space-y-2">
-                  <div className="text-3xl font-bold">AED 9,175</div>
-                  <div className="text-orange-100">Value delivered in one call</div>
-                </div>
-                <div className="space-y-2">
-                  <div className="text-3xl font-bold">2 slots</div>
-                  <div className="text-orange-100">Available per month</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Footer */}
       <footer className="py-12 bg-slate-900">
         <div className="container mx-auto px-4">
