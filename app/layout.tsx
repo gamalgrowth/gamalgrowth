@@ -15,6 +15,12 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Gamal Growth",
   description: "Fractional Head of Performance Marketing for 7-8-figure MENA e-commerce brands.",
+  icons: {
+    icon: {
+      url: "/logo.svg?v=2",
+      type: "image/svg+xml",
+    },
+  },
 };
 
 export default function RootLayout({
