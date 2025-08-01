@@ -26,10 +26,9 @@ import {
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
-import { CalInlineEmbed, CalPopupButton } from "@/components/cal-embed"
 
 export default function GamalConsultingLanding() {
-  const handleStripePayment = async (priceId: string, productName: string) => {
+  const handleStripePayment = async (lookupKey: string, productName: string) => {
     try {
       const response = await fetch("/api/create-checkout-session", {
         method: "POST",
@@ -37,7 +36,7 @@ export default function GamalConsultingLanding() {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          priceId,
+          lookupKey,
           productName,
           successUrl: `${window.location.origin}/success?product=${encodeURIComponent(productName)}`,
           cancelUrl: `${window.location.origin}/#services`,
@@ -136,26 +135,18 @@ export default function GamalConsultingLanding() {
               </div>
 
               <div className="space-y-4">
-                <CalPopupButton
-                  calLink="gamal/poas-power-audit"
-                  className="inline-block"
-                  config={{
-                    theme: "light",
-                  }}
+                <Button
+                  onClick={() => handleStripePayment("one_hour_strategy_call", "One-Hour Strategy Call")}
+                  size="lg"
+                  className="bg-orange-500 hover:bg-orange-600 text-white px-12 py-6 text-xl font-semibold rounded-xl shadow-xl hover:shadow-2xl transition-all cursor-pointer"
                 >
-                  <Button
-                    size="lg"
-                    className="bg-orange-500 hover:bg-orange-600 text-white px-12 py-6 text-xl font-semibold rounded-xl shadow-xl hover:shadow-2xl transition-all cursor-pointer"
-                  >
-                    <Calendar className="mr-3 w-6 h-6" />
-                    Book a POAS Power Audit - $2,500
-                    <ArrowRight className="ml-3 w-6 h-6" />
-                  </Button>
-                </CalPopupButton>
-
+                  <CreditCard className="mr-3 w-6 h-6" />
+                  Book a One-Hour Strategy Call - AED 1,200
+                  <ArrowRight className="ml-3 w-6 h-6" />
+                </Button>
                 <p className="text-sm text-slate-400 flex items-center space-x-2">
                   <Clock className="w-4 h-4" />
-                  <span>Limited availability • Book directly via Cal.com • No pitch, just clarity</span>
+                  <span>Limited availability • Targeted expert advice</span>
                 </p>
               </div>
             </div>
@@ -452,7 +443,7 @@ export default function GamalConsultingLanding() {
                   <Search className="w-8 h-8 text-orange-600" />
                 </div>
                 <CardTitle className="text-2xl text-slate-900">POAS Power Audit</CardTitle>
-                <div className="text-3xl font-bold text-orange-600 mt-2">$2,500</div>
+                <div className="text-3xl font-bold text-orange-600 mt-2">AED 9,175</div>
                 <CardDescription className="text-slate-600 mt-4">
                   2 weeks to surface profit leaks & misallocated spend
                 </CardDescription>
@@ -477,11 +468,11 @@ export default function GamalConsultingLanding() {
                   </div>
                 </div>
                 <Button
-                  onClick={() => handleStripePayment("price_poas_audit", "POAS Power Audit")}
+                  onClick={() => handleStripePayment("poas_power_audit", "POAS Power Audit")}
                   className="w-full bg-orange-500 hover:bg-orange-600 text-white"
                 >
                   <CreditCard className="mr-2 w-4 h-4" />
-                  Pay Now - $2,500
+                  Pay Now - AED 9,175
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </Button>
                 <div className="text-center">
@@ -502,7 +493,7 @@ export default function GamalConsultingLanding() {
                   <Zap className="w-8 h-8 text-white" />
                 </div>
                 <CardTitle className="text-2xl text-slate-900">90-Day Growth Sprint</CardTitle>
-                <div className="text-3xl font-bold text-orange-600 mt-2">$15,000</div>
+                <div className="text-3xl font-bold text-orange-600 mt-2">AED 55,050</div>
                 <CardDescription className="text-slate-600 mt-4">
                   AI systems, creative loops, channel cleanup
                 </CardDescription>
@@ -531,11 +522,11 @@ export default function GamalConsultingLanding() {
                   </div>
                 </div>
                 <Button
-                  onClick={() => handleStripePayment("price_growth_sprint", "90-Day Growth Sprint")}
+                  onClick={() => handleStripePayment("ninety_day_growth_sprint", "90-Day Growth Sprint")}
                   className="w-full bg-orange-500 hover:bg-orange-600 text-white"
                 >
                   <CreditCard className="mr-2 w-4 h-4" />
-                  Pay Now - $15,000
+                  Pay Now - AED 55,050
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </Button>
                 <div className="text-center">
@@ -554,7 +545,7 @@ export default function GamalConsultingLanding() {
                   <Shield className="w-8 h-8 text-slate-600" />
                 </div>
                 <CardTitle className="text-2xl text-slate-900">Fractional Retainer</CardTitle>
-                <div className="text-3xl font-bold text-slate-600 mt-2">$8,000/mo</div>
+                <div className="text-3xl font-bold text-slate-600 mt-2">AED 29,360/mo</div>
                 <CardDescription className="text-slate-600 mt-4">
                   Own your KPIs weekly, no juniors, no fluff
                 </CardDescription>
@@ -579,11 +570,11 @@ export default function GamalConsultingLanding() {
                   </div>
                 </div>
                 <Button
-                  onClick={() => handleStripePayment("price_fractional_retainer", "Fractional Retainer")}
+                  onClick={() => handleStripePayment("fractional_retainer_monthly", "Fractional Retainer")}
                   className="w-full bg-slate-600 hover:bg-slate-700 text-white"
                 >
                   <CreditCard className="mr-2 w-4 h-4" />
-                  Subscribe - $8,000/mo
+                  Subscribe - AED 29,360/mo
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </Button>
                 <div className="text-center">
@@ -973,18 +964,7 @@ export default function GamalConsultingLanding() {
                         rows={4}
                       />
                     </div>
-                    <CalPopupButton
-                      calLink="gamal/poas-power-audit"
-                      className="w-full"
-                      config={{
-                        theme: "light",
-                      }}
-                    >
-                      <Button size="lg" className="w-full bg-orange-500 hover:bg-orange-600 text-white cursor-pointer">
-                        Submit & Book Call
-                        <ArrowRight className="ml-2 w-5 h-5" />
-                      </Button>
-                    </CalPopupButton>
+                    {/* Removed CalPopupButton */}
                   </form>
                 </CardContent>
               </Card>
@@ -994,12 +974,7 @@ export default function GamalConsultingLanding() {
                 <h3 className="text-2xl font-bold text-slate-900 mb-6 text-center">Book Your POAS Power Audit</h3>
 
                 {/* Cal.com Inline Widget */}
-                <CalInlineEmbed
-                  calLink="gamal/poas-power-audit"
-                  config={{
-                    theme: "light",
-                  }}
-                />
+                {/* Removed CalInlineEmbed */}
 
                 {/* Fallback for when Cal.com doesn't load */}
                 <div className="text-center space-y-4 mt-6">
@@ -1027,7 +1002,7 @@ export default function GamalConsultingLanding() {
                   <div className="text-orange-100">Deep-dive audit call</div>
                 </div>
                 <div className="space-y-2">
-                  <div className="text-3xl font-bold">$2,500</div>
+                  <div className="text-3xl font-bold">AED 9,175</div>
                   <div className="text-orange-100">Value delivered in one call</div>
                 </div>
                 <div className="space-y-2">
