@@ -137,7 +137,7 @@ export default function GamalConsultingLanding() {
                   className="bg-orange-500 hover:bg-orange-600 text-white px-12 py-6 text-xl font-semibold rounded-xl shadow-xl hover:shadow-2xl transition-all cursor-pointer"
                 >
                   <CreditCard className="mr-3 w-6 h-6" />
-                  Book a One-Hour Strategy Call - AED 1,200
+                  Book a One-Hour Strategy Call - AED 999
                   <ArrowRight className="ml-3 w-6 h-6" />
                 </Button>
                 <p className="text-sm text-slate-400 flex items-center space-x-2">
