@@ -1031,48 +1031,8 @@ export default function GamalConsultingLanding() {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              {/* Left side - Contact form for initial info */}
-              <Card className="bg-white">
-                <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold text-slate-900 mb-6">Tell Me About Your Business</h3>
-                  <form className="space-y-6">
-                    <div className="space-y-2">
-                      <Label htmlFor="name">Name</Label>
-                      <Input id="name" placeholder="Your full name" />
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="email">Email</Label>
-                      <Input id="email" type="email" placeholder="your@email.com" />
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="website">Website URL</Label>
-                      <Input id="website" placeholder="https://yourwebsite.com" />
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="revenue">Monthly Revenue Range</Label>
-                      <select className="w-full px-3 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500">
-                        <option>Select range...</option>
-                        <option>$50K - $100K</option>
-                        <option>$100K - $500K</option>
-                        <option>$500K - $1M</option>
-                        <option>$1M+</option>
-                      </select>
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="challenge">Biggest Performance Marketing Challenge</Label>
-                      <Textarea
-                        id="challenge"
-                        placeholder="What's keeping you up at night? ROAS vs profit issues, attribution problems, scaling challenges..."
-                        rows={4}
-                      />
-                    </div>
-                    {/* Removed CalPopupButton */}
-                  </form>
-                </CardContent>
-              </Card>
-
-              {/* Right side - Cal.com embed */}
+            <div className="max-w-2xl mx-auto">
+              {/* Cal.com booking section - centered */}
               <div className="bg-white rounded-lg p-8">
                 <h3 className="text-2xl font-bold text-slate-900 mb-6 text-center">Book Your POAS Power Audit</h3>
 
