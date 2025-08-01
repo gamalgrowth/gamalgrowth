@@ -178,84 +178,188 @@ export default function GamalConsultingLanding() {
             <div className="flex animate-infinite-scroll space-x-4">
               {/* First complete set */}
               <div className="flex-shrink-0 bg-orange-500 rounded-full px-8 py-4 min-w-[180px] flex items-center justify-center">
-                <img src="/logos/01.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
+                <img
+                  src="/logos/01.png"
+                  alt="Logo of Nike, a brand partner for e-commerce growth"
+                  className="h-8 w-auto object-contain max-w-[120px]"
+                />
               </div>
               <div className="flex-shrink-0 bg-orange-500 rounded-full px-8 py-4 min-w-[180px] flex items-center justify-center">
-                <img src="/logos/02.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
+                <img
+                  src="/logos/02.png"
+                  alt="Logo of Under Armour, a brand partner for e-commerce growth"
+                  className="h-8 w-auto object-contain max-w-[120px]"
+                />
               </div>
               <div className="flex-shrink-0 bg-orange-500 rounded-full px-8 py-4 min-w-[180px] flex items-center justify-center">
-                <img src="/logos/03.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
+                <img
+                  src="/logos/03.png"
+                  alt="Logo of JD Sports, a brand partner for e-commerce growth"
+                  className="h-8 w-auto object-contain max-w-[120px]"
+                />
               </div>
               <div className="flex-shrink-0 bg-orange-500 rounded-full px-8 py-4 min-w-[180px] flex items-center justify-center">
-                <img src="/logos/04.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
+                <img
+                  src="/logos/04.png"
+                  alt="Logo of Sun and Sands Sports, a brand partner for e-commerce growth"
+                  className="h-8 w-auto object-contain max-w-[120px]"
+                />
               </div>
               <div className="flex-shrink-0 bg-orange-500 rounded-full px-8 py-4 min-w-[180px] flex items-center justify-center">
-                <img src="/logos/05.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
+                <img
+                  src="/logos/05.png"
+                  alt="Logo of a brand partner for performance marketing"
+                  className="h-8 w-auto object-contain max-w-[120px]"
+                />
               </div>
               <div className="flex-shrink-0 bg-orange-500 rounded-full px-8 py-4 min-w-[180px] flex items-center justify-center">
-                <img src="/logos/06.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
+                <img
+                  src="/logos/06.png"
+                  alt="Logo of a brand partner for performance marketing"
+                  className="h-8 w-auto object-contain max-w-[120px]"
+                />
               </div>
               <div className="flex-shrink-0 bg-orange-500 rounded-full px-8 py-4 min-w-[180px] flex items-center justify-center">
-                <img src="/logos/07.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
+                <img
+                  src="/logos/07.png"
+                  alt="Logo of a brand partner for performance marketing"
+                  className="h-8 w-auto object-contain max-w-[120px]"
+                />
               </div>
               <div className="flex-shrink-0 bg-orange-500 rounded-full px-8 py-4 min-w-[180px] flex items-center justify-center">
-                <img src="/logos/08.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
+                <img
+                  src="/logos/08.png"
+                  alt="Logo of a brand partner for performance marketing"
+                  className="h-8 w-auto object-contain max-w-[120px]"
+                />
               </div>
               <div className="flex-shrink-0 bg-orange-500 rounded-full px-8 py-4 min-w-[180px] flex items-center justify-center">
-                <img src="/logos/09.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
+                <img
+                  src="/logos/09.png"
+                  alt="Logo of a brand partner for performance marketing"
+                  className="h-8 w-auto object-contain max-w-[120px]"
+                />
               </div>
               <div className="flex-shrink-0 bg-orange-500 rounded-full px-8 py-4 min-w-[180px] flex items-center justify-center">
-                <img src="/logos/10.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
+                <img
+                  src="/logos/10.png"
+                  alt="Logo of a brand partner for performance marketing"
+                  className="h-8 w-auto object-contain max-w-[120px]"
+                />
               </div>
               <div className="flex-shrink-0 bg-orange-500 rounded-full px-8 py-4 min-w-[180px] flex items-center justify-center">
-                <img src="/logos/11.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
+                <img
+                  src="/logos/11.png"
+                  alt="Logo of a brand partner for performance marketing"
+                  className="h-8 w-auto object-contain max-w-[120px]"
+                />
               </div>
               <div className="flex-shrink-0 bg-orange-500 rounded-full px-8 py-4 min-w-[180px] flex items-center justify-center">
-                <img src="/logos/12.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
+                <img
+                  src="/logos/12.png"
+                  alt="Logo of a brand partner for performance marketing"
+                  className="h-8 w-auto object-contain max-w-[120px]"
+                />
               </div>
               <div className="flex-shrink-0 bg-orange-500 rounded-full px-8 py-4 min-w-[180px] flex items-center justify-center">
-                <img src="/logos/13.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
+                <img
+                  src="/logos/13.png"
+                  alt="Logo of a brand partner for performance marketing"
+                  className="h-8 w-auto object-contain max-w-[120px]"
+                />
               </div>
 
               {/* Second complete set for seamless loop */}
               <div className="flex-shrink-0 bg-orange-500 rounded-full px-8 py-4 min-w-[180px] flex items-center justify-center">
-                <img src="/logos/01.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
+                <img
+                  src="/logos/01.png"
+                  alt="Logo of Nike, a brand partner for e-commerce growth"
+                  className="h-8 w-auto object-contain max-w-[120px]"
+                />
               </div>
               <div className="flex-shrink-0 bg-orange-500 rounded-full px-8 py-4 min-w-[180px] flex items-center justify-center">
-                <img src="/logos/02.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
+                <img
+                  src="/logos/02.png"
+                  alt="Logo of Under Armour, a brand partner for e-commerce growth"
+                  className="h-8 w-auto object-contain max-w-[120px]"
+                />
               </div>
               <div className="flex-shrink-0 bg-orange-500 rounded-full px-8 py-4 min-w-[180px] flex items-center justify-center">
-                <img src="/logos/03.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
+                <img
+                  src="/logos/03.png"
+                  alt="Logo of JD Sports, a brand partner for e-commerce growth"
+                  className="h-8 w-auto object-contain max-w-[120px]"
+                />
               </div>
               <div className="flex-shrink-0 bg-orange-500 rounded-full px-8 py-4 min-w-[180px] flex items-center justify-center">
-                <img src="/logos/04.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
+                <img
+                  src="/logos/04.png"
+                  alt="Logo of Sun and Sands Sports, a brand partner for e-commerce growth"
+                  className="h-8 w-auto object-contain max-w-[120px]"
+                />
               </div>
               <div className="flex-shrink-0 bg-orange-500 rounded-full px-8 py-4 min-w-[180px] flex items-center justify-center">
-                <img src="/logos/05.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
+                <img
+                  src="/logos/05.png"
+                  alt="Logo of a brand partner for performance marketing"
+                  className="h-8 w-auto object-contain max-w-[120px]"
+                />
               </div>
               <div className="flex-shrink-0 bg-orange-500 rounded-full px-8 py-4 min-w-[180px] flex items-center justify-center">
-                <img src="/logos/06.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
+                <img
+                  src="/logos/06.png"
+                  alt="Logo of a brand partner for performance marketing"
+                  className="h-8 w-auto object-contain max-w-[120px]"
+                />
               </div>
               <div className="flex-shrink-0 bg-orange-500 rounded-full px-8 py-4 min-w-[180px] flex items-center justify-center">
-                <img src="/logos/07.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
+                <img
+                  src="/logos/07.png"
+                  alt="Logo of a brand partner for performance marketing"
+                  className="h-8 w-auto object-contain max-w-[120px]"
+                />
               </div>
               <div className="flex-shrink-0 bg-orange-500 rounded-full px-8 py-4 min-w-[180px] flex items-center justify-center">
-                <img src="/logos/08.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
+                <img
+                  src="/logos/08.png"
+                  alt="Logo of a brand partner for performance marketing"
+                  className="h-8 w-auto object-contain max-w-[120px]"
+                />
               </div>
               <div className="flex-shrink-0 bg-orange-500 rounded-full px-8 py-4 min-w-[180px] flex items-center justify-center">
-                <img src="/logos/09.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
+                <img
+                  src="/logos/09.png"
+                  alt="Logo of a brand partner for performance marketing"
+                  className="h-8 w-auto object-contain max-w-[120px]"
+                />
               </div>
               <div className="flex-shrink-0 bg-orange-500 rounded-full px-8 py-4 min-w-[180px] flex items-center justify-center">
-                <img src="/logos/10.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
+                <img
+                  src="/logos/10.png"
+                  alt="Logo of a brand partner for performance marketing"
+                  className="h-8 w-auto object-contain max-w-[120px]"
+                />
               </div>
               <div className="flex-shrink-0 bg-orange-500 rounded-full px-8 py-4 min-w-[180px] flex items-center justify-center">
-                <img src="/logos/11.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
+                <img
+                  src="/logos/11.png"
+                  alt="Logo of a brand partner for performance marketing"
+                  className="h-8 w-auto object-contain max-w-[120px]"
+                />
               </div>
               <div className="flex-shrink-0 bg-orange-500 rounded-full px-8 py-4 min-w-[180px] flex items-center justify-center">
-                <img src="/logos/12.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
+                <img
+                  src="/logos/12.png"
+                  alt="Logo of a brand partner for performance marketing"
+                  className="h-8 w-auto object-contain max-w-[120px]"
+                />
               </div>
               <div className="flex-shrink-0 bg-orange-500 rounded-full px-8 py-4 min-w-[180px] flex items-center justify-center">
-                <img src="/logos/13.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
+                <img
+                  src="/logos/13.png"
+                  alt="Logo of a brand partner for performance marketing"
+                  className="h-8 w-auto object-contain max-w-[120px]"
+                />
               </div>
             </div>
           </div>
