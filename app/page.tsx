@@ -88,11 +88,7 @@ export default function GamalConsultingLanding() {
       <section className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden min-h-[500px] md:min-h-[700px]">
         {/* Large Transparent Photo Overlay */}
         <div className="absolute right-0 top-0 w-full h-full opacity-25">
-          <img
-            src="/images/Gamal-photo.png"
-            alt="Mohamed Gamal, a performance marketing expert specializing in e-commerce growth"
-            className="w-full h-full object-contain object-right"
-          />
+          <img src="/images/Gamal-photo.png" alt="Mohamed Gamal" className="w-full h-full object-contain object-right" />
         </div>
 
         {/* Content */}
@@ -107,12 +103,12 @@ export default function GamalConsultingLanding() {
                 </div>
 
                 <h1 className="text-6xl lg:text-8xl font-bold leading-tight">
-                  Performance Marketing for <span className="text-orange-500 relative">E-commerce Growth</span>
+                  Turn Ad Spend into <span className="text-orange-500 relative">Profit-Fuel</span>
                 </h1>
 
                 <p className="text-xl text-slate-300 leading-relaxed max-w-2xl">
-                  Driving e-commerce growth for 7-8 figure brands with expert performance marketing. As the former Director of
-                  Growth Marketing at GMG, I scaled iconic brands like Nike, Under Armour, and JD Sports.
+                  Fractional Head of Performance Marketing for 7-8-figure MENA e-commerce brands. AI-driven systems
+                  wired directly to your P&L.
                 </p>
 
                 <div className="flex flex-wrap items-center gap-8 text-orange-400 text-lg">
@@ -170,19 +166,104 @@ export default function GamalConsultingLanding() {
         </div>
       </section>
 
-      {/* Trusted By Brands Section */}
-      <section className="py-12 bg-white border-y border-slate-200">
+      {/* Trusted By Brands Carousel */}
+      <section className="py-8 bg-white border-y border-slate-200">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-8">
-            <p className="text-sm text-slate-500 font-medium tracking-wide uppercase">
-              Proven experience scaling world-class brands
-            </p>
+          <div className="text-center mb-6">
+            <p className="text-sm text-slate-500 font-medium tracking-wide uppercase">Trusted by Leading MENA Brands</p>
           </div>
-          <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-4 text-slate-600">
-            <span className="text-2xl font-bold">Nike</span>
-            <span className="text-2xl font-bold">Under Armour</span>
-            <span className="text-2xl font-bold">JD Sports</span>
-            <span className="text-2xl font-bold">Sun & Sand Sports</span>
+
+          {/* Scrolling Brands Container */}
+          <div className="relative overflow-hidden pointer-events-none">
+            <div className="flex animate-infinite-scroll space-x-4">
+              {/* First complete set */}
+              <div className="flex-shrink-0 bg-orange-500 rounded-full px-8 py-4 min-w-[180px] flex items-center justify-center">
+                <img src="/logos/01.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
+              </div>
+              <div className="flex-shrink-0 bg-orange-500 rounded-full px-8 py-4 min-w-[180px] flex items-center justify-center">
+                <img src="/logos/02.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
+              </div>
+              <div className="flex-shrink-0 bg-orange-500 rounded-full px-8 py-4 min-w-[180px] flex items-center justify-center">
+                <img src="/logos/03.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
+              </div>
+              <div className="flex-shrink-0 bg-orange-500 rounded-full px-8 py-4 min-w-[180px] flex items-center justify-center">
+                <img src="/logos/04.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
+              </div>
+              <div className="flex-shrink-0 bg-orange-500 rounded-full px-8 py-4 min-w-[180px] flex items-center justify-center">
+                <img src="/logos/05.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
+              </div>
+              <div className="flex-shrink-0 bg-orange-500 rounded-full px-8 py-4 min-w-[180px] flex items-center justify-center">
+                <img src="/logos/06.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
+              </div>
+              <div className="flex-shrink-0 bg-orange-500 rounded-full px-8 py-4 min-w-[180px] flex items-center justify-center">
+                <img src="/logos/07.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
+              </div>
+              <div className="flex-shrink-0 bg-orange-500 rounded-full px-8 py-4 min-w-[180px] flex items-center justify-center">
+                <img src="/logos/08.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
+              </div>
+              <div className="flex-shrink-0 bg-orange-500 rounded-full px-8 py-4 min-w-[180px] flex items-center justify-center">
+                <img src="/logos/09.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
+              </div>
+              <div className="flex-shrink-0 bg-orange-500 rounded-full px-8 py-4 min-w-[180px] flex items-center justify-center">
+                <img src="/logos/10.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
+              </div>
+              <div className="flex-shrink-0 bg-orange-500 rounded-full px-8 py-4 min-w-[180px] flex items-center justify-center">
+                <img src="/logos/11.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
+              </div>
+              <div className="flex-shrink-0 bg-orange-500 rounded-full px-8 py-4 min-w-[180px] flex items-center justify-center">
+                <img src="/logos/12.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
+              </div>
+              <div className="flex-shrink-0 bg-orange-500 rounded-full px-8 py-4 min-w-[180px] flex items-center justify-center">
+                <img src="/logos/13.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
+              </div>
+
+              {/* Second complete set for seamless loop */}
+              <div className="flex-shrink-0 bg-orange-500 rounded-full px-8 py-4 min-w-[180px] flex items-center justify-center">
+                <img src="/logos/01.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
+              </div>
+              <div className="flex-shrink-0 bg-orange-500 rounded-full px-8 py-4 min-w-[180px] flex items-center justify-center">
+                <img src="/logos/02.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
+              </div>
+              <div className="flex-shrink-0 bg-orange-500 rounded-full px-8 py-4 min-w-[180px] flex items-center justify-center">
+                <img src="/logos/03.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
+              </div>
+              <div className="flex-shrink-0 bg-orange-500 rounded-full px-8 py-4 min-w-[180px] flex items-center justify-center">
+                <img src="/logos/04.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
+              </div>
+              <div className="flex-shrink-0 bg-orange-500 rounded-full px-8 py-4 min-w-[180px] flex items-center justify-center">
+                <img src="/logos/05.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
+              </div>
+              <div className="flex-shrink-0 bg-orange-500 rounded-full px-8 py-4 min-w-[180px] flex items-center justify-center">
+                <img src="/logos/06.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
+              </div>
+              <div className="flex-shrink-0 bg-orange-500 rounded-full px-8 py-4 min-w-[180px] flex items-center justify-center">
+                <img src="/logos/07.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
+              </div>
+              <div className="flex-shrink-0 bg-orange-500 rounded-full px-8 py-4 min-w-[180px] flex items-center justify-center">
+                <img src="/logos/08.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
+              </div>
+              <div className="flex-shrink-0 bg-orange-500 rounded-full px-8 py-4 min-w-[180px] flex items-center justify-center">
+                <img src="/logos/09.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
+              </div>
+              <div className="flex-shrink-0 bg-orange-500 rounded-full px-8 py-4 min-w-[180px] flex items-center justify-center">
+                <img src="/logos/10.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
+              </div>
+              <div className="flex-shrink-0 bg-orange-500 rounded-full px-8 py-4 min-w-[180px] flex items-center justify-center">
+                <img src="/logos/11.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
+              </div>
+              <div className="flex-shrink-0 bg-orange-500 rounded-full px-8 py-4 min-w-[180px] flex items-center justify-center">
+                <img src="/logos/12.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
+              </div>
+              <div className="flex-shrink-0 bg-orange-500 rounded-full px-8 py-4 min-w-[180px] flex items-center justify-center">
+                <img src="/logos/13.png" alt="Brand partner" className="h-8 w-auto object-contain max-w-[120px]" />
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center mt-4">
+            <p className="text-sm text-slate-600 font-bold tracking-wide">
+              $100M+ COMBINED AD SPEND MANAGED ACROSS MENA PARTNERSHIPS
+            </p>
           </div>
         </div>
       </section>
@@ -234,9 +315,7 @@ export default function GamalConsultingLanding() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center space-y-4 mb-16">
-              <h2 className="text-4xl font-bold text-slate-900">
-                A New Approach to Performance Marketing
-              </h2>
+              <h2 className="text-4xl font-bold text-slate-900">The Solution? POAS + AI + P&L Integration</h2>
               <p className="text-xl text-slate-600">Stop optimizing for vanity metrics. Start optimizing for profit.</p>
             </div>
             <div className="grid md:grid-cols-3 gap-8">
@@ -350,7 +429,7 @@ export default function GamalConsultingLanding() {
       <section id="services" className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center space-y-4 mb-16">
-            <h2 className="text-4xl font-bold text-slate-900">Performance Marketing Services</h2>
+            <h2 className="text-4xl font-bold text-slate-900">Our Products</h2>
             <p className="text-xl text-slate-600 max-w-2xl mx-auto">
               Choose the right solution for your business growth stage and needs. Secure payments via Stripe.
             </p>
@@ -711,7 +790,7 @@ export default function GamalConsultingLanding() {
       <section id="thoughts" className="py-20 bg-slate-50">
         <div className="container mx-auto px-4">
           <div className="text-center space-y-4 mb-16">
-            <h2 className="text-4xl font-bold text-slate-900">Insights on E-commerce Growth</h2>
+            <h2 className="text-4xl font-bold text-slate-900">My Thoughts</h2>
             <p className="text-xl text-slate-600 max-w-2xl mx-auto">
               Insights from 14 years of scaling MENA e-commerce brands and navigating the evolving performance marketing
               landscape.
