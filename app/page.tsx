@@ -22,9 +22,6 @@ import {
   LineChart,
   CreditCard,
 } from "lucide-react"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { Textarea } from "@/components/ui/textarea"
 
 export default function GamalConsultingLanding() {
   const handleStripePayment = async (lookupKey: string, productName: string) => {
