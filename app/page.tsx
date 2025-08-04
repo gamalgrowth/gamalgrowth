@@ -30,20 +30,27 @@ export default function GamalConsultingLanding() {
   // Force deployment update - orange contact section completely removed
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
-  const handleMobileLinkClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+  const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault()
     const targetId = e.currentTarget.href.split("#")[1]
-    setIsMobileMenuOpen(false)
 
-    setTimeout(() => {
-      const targetElement = document.getElementById(targetId)
-      if (targetElement) {
-        window.scrollTo({
-          top: targetElement.offsetTop,
-          behavior: "smooth",
-        })
-      }
-    }, 100)
+    if (isMobileMenuOpen) {
+      setIsMobileMenuOpen(false)
+    }
+
+    // A short delay for mobile to allow the menu to close before scrolling
+    setTimeout(
+      () => {
+        const targetElement = document.getElementById(targetId)
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop,
+            behavior: "smooth",
+          })
+        }
+      },
+      isMobileMenuOpen ? 100 : 0
+    )
   }
 
   const handleStripePayment = async (lookupKey: string, productName: string) => {
@@ -86,16 +93,16 @@ export default function GamalConsultingLanding() {
           
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#services" className="text-slate-600 hover:text-orange-500 transition-colors">
+            <a href="#services" onClick={handleSmoothScroll} className="text-slate-600 hover:text-orange-500 transition-colors">
               Services
             </a>
-            <a href="#results" className="text-slate-600 hover:text-orange-500 transition-colors">
+            <a href="#results" onClick={handleSmoothScroll} className="text-slate-600 hover:text-orange-500 transition-colors">
               Results
             </a>
-            <a href="#updates" className="text-slate-600 hover:text-orange-500 transition-colors">
+            <a href="#updates" onClick={handleSmoothScroll} className="text-slate-600 hover:text-orange-500 transition-colors">
               Performance Updates
             </a>
-            <a href="#thoughts" className="text-slate-600 hover:text-orange-500 transition-colors">
+            <a href="#thoughts" onClick={handleSmoothScroll} className="text-slate-600 hover:text-orange-500 transition-colors">
               My Thoughts
             </a>
           </nav>
@@ -117,28 +124,28 @@ export default function GamalConsultingLanding() {
               <a 
                 href="#services" 
                 className="text-slate-600 hover:text-orange-500 transition-colors py-2"
-                onClick={handleMobileLinkClick}
+                onClick={handleSmoothScroll}
               >
                 Services
               </a>
               <a 
                 href="#results" 
                 className="text-slate-600 hover:text-orange-500 transition-colors py-2"
-                onClick={handleMobileLinkClick}
+                onClick={handleSmoothScroll}
               >
                 Results
               </a>
               <a 
                 href="#updates" 
                 className="text-slate-600 hover:text-orange-500 transition-colors py-2"
-                onClick={handleMobileLinkClick}
+                onClick={handleSmoothScroll}
               >
                 Performance Updates
               </a>
               <a 
                 href="#thoughts" 
                 className="text-slate-600 hover:text-orange-500 transition-colors py-2"
-                onClick={handleMobileLinkClick}
+                onClick={handleSmoothScroll}
               >
                 My Thoughts
               </a>
