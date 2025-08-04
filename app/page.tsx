@@ -32,6 +32,7 @@ export default function GamalConsultingLanding() {
   const animationFrameRef = useRef<number | null>(null)
 
   const smoothScroll = (targetPosition: number, duration: number) => {
+    console.log("smoothScroll: Initiating scroll animation.")
     const startPosition = window.scrollY
     const distance = targetPosition - startPosition
     let startTime: number | null = null
@@ -44,10 +45,12 @@ export default function GamalConsultingLanding() {
       const newPosition = startPosition + distance * ease(run)
       
       window.scrollTo(0, newPosition)
+      console.log(`smoothScroll: Animating... Frame: ${animationFrameRef.current}, Position: ${newPosition}`)
 
       if (timeElapsed < duration) {
         animationFrameRef.current = requestAnimationFrame(animation)
       } else {
+        console.log("smoothScroll: Animation finished.")
         animationFrameRef.current = null
       }
     }
@@ -57,8 +60,10 @@ export default function GamalConsultingLanding() {
 
   const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault()
+    console.log("handleSmoothScroll: Click detected.")
     
     if (animationFrameRef.current) {
+      console.log(`handleSmoothScroll: Cancelling previous animation frame: ${animationFrameRef.current}`)
       cancelAnimationFrame(animationFrameRef.current)
     }
     
@@ -72,23 +77,31 @@ export default function GamalConsultingLanding() {
 
     if (targetElement) {
       const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY
+      console.log(`handleSmoothScroll: Starting new scroll to #${targetId} at position ${elementPosition}`)
       smoothScroll(elementPosition, 800)
     }
   }
 
   useEffect(() => {
     const handleWheel = () => {
+      console.log("handleWheel: Wheel event detected!")
       if (animationFrameRef.current) {
+        console.log(`handleWheel: Wheel interrupting animation frame: ${animationFrameRef.current}`)
         cancelAnimationFrame(animationFrameRef.current)
         animationFrameRef.current = null
+      } else {
+        console.log("handleWheel: Wheel event detected, but no animation was running.")
       }
     }
 
     window.addEventListener('wheel', handleWheel, { passive: true })
+    console.log("useEffect: 'wheel' event listener added.")
 
     return () => {
       window.removeEventListener('wheel', handleWheel)
+      console.log("useEffect: 'wheel' event listener removed.")
       if (animationFrameRef.current) {
+        console.log("useEffect: Cleaning up animation frame on unmount.")
         cancelAnimationFrame(animationFrameRef.current)
       }
     }
