@@ -47,6 +47,8 @@ export default function GamalConsultingLanding() {
 
       if (timeElapsed < duration) {
         animationFrameRef.current = requestAnimationFrame(animation)
+      } else {
+        animationFrameRef.current = null
       }
     }
 
@@ -55,8 +57,7 @@ export default function GamalConsultingLanding() {
 
   const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault()
-    e.stopPropagation()
-
+    
     if (animationFrameRef.current) {
       cancelAnimationFrame(animationFrameRef.current)
     }
@@ -65,26 +66,25 @@ export default function GamalConsultingLanding() {
       setIsMobileMenuOpen(false)
     }
 
-    setTimeout(() => {
-      const href = e.currentTarget.href
-      const targetId = href.substring(href.lastIndexOf("#") + 1)
-      const targetElement = document.getElementById(targetId)
+    const href = e.currentTarget.href
+    const targetId = href.substring(href.lastIndexOf("#") + 1)
+    const targetElement = document.getElementById(targetId)
 
-      if (targetElement) {
-        const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY
-        smoothScroll(elementPosition, 800) // 800ms duration
-      }
-    }, isMobileMenuOpen ? 100 : 0)
+    if (targetElement) {
+      const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY
+      smoothScroll(elementPosition, 800)
+    }
   }
 
   useEffect(() => {
     const handleWheel = () => {
       if (animationFrameRef.current) {
         cancelAnimationFrame(animationFrameRef.current)
+        animationFrameRef.current = null
       }
     }
 
-    window.addEventListener('wheel', handleWheel)
+    window.addEventListener('wheel', handleWheel, { passive: true })
 
     return () => {
       window.removeEventListener('wheel', handleWheel)
