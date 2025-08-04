@@ -21,10 +21,85 @@ import {
   Calculator,
   LineChart,
   CreditCard,
+  Menu,
+  X,
 } from "lucide-react"
+import { useState, useEffect, useRef } from "react"
 
 export default function GamalConsultingLanding() {
   // Force deployment update - orange contact section completely removed
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const animationFrameRef = useRef<number | null>(null)
+  const isProgrammaticScrollRef = useRef(false)
+
+  const smoothScroll = (targetPosition: number, duration: number) => {
+    isProgrammaticScrollRef.current = true
+    const startPosition = window.scrollY
+    const distance = targetPosition - startPosition
+    let startTime: number | null = null
+
+    const animation = (currentTime: number) => {
+      if (startTime === null) startTime = currentTime
+      const timeElapsed = currentTime - startTime
+      const run = Math.min(timeElapsed / duration, 1)
+      const ease = (t: number) => t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t
+      const newPosition = startPosition + distance * ease(run)
+      
+      window.scrollTo(0, newPosition)
+
+      if (timeElapsed < duration) {
+        animationFrameRef.current = requestAnimationFrame(animation)
+      } else {
+        animationFrameRef.current = null
+        isProgrammaticScrollRef.current = false
+      }
+    }
+
+    animationFrameRef.current = requestAnimationFrame(animation)
+  }
+
+  const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault()
+    
+    if (animationFrameRef.current) {
+      cancelAnimationFrame(animationFrameRef.current)
+    }
+    
+    if (isMobileMenuOpen) {
+      setIsMobileMenuOpen(false)
+    }
+
+    const href = e.currentTarget.href
+    const targetId = href.substring(href.lastIndexOf("#") + 1)
+    const targetElement = document.getElementById(targetId)
+
+    if (targetElement) {
+      const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY
+      smoothScroll(elementPosition, 800)
+    }
+  }
+
+  useEffect(() => {
+    const handleWheel = () => {
+      if (isProgrammaticScrollRef.current) {
+        if (animationFrameRef.current) {
+          cancelAnimationFrame(animationFrameRef.current)
+          animationFrameRef.current = null
+        }
+        isProgrammaticScrollRef.current = false
+      }
+    }
+
+    window.addEventListener('wheel', handleWheel, { passive: true })
+
+    return () => {
+      window.removeEventListener('wheel', handleWheel)
+      if (animationFrameRef.current) {
+        cancelAnimationFrame(animationFrameRef.current)
+      }
+    }
+  }, [])
+
   const handleStripePayment = async (lookupKey: string, productName: string) => {
     try {
       const response = await fetch("/api/create-checkout-session", {
@@ -62,24 +137,68 @@ export default function GamalConsultingLanding() {
             </div>
             <span className="text-xl font-bold text-slate-900">Gamal Growth</span>
           </div>
+          
+          {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#services" className="text-slate-600 hover:text-orange-500 transition-colors">
+            <a href="#services" onClick={handleSmoothScroll} className="text-slate-600 hover:text-orange-500 transition-colors">
               Services
             </a>
-            <a href="#results" className="text-slate-600 hover:text-orange-500 transition-colors">
+            <a href="#results" onClick={handleSmoothScroll} className="text-slate-600 hover:text-orange-500 transition-colors">
               Results
             </a>
-            <a href="#updates" className="text-slate-600 hover:text-orange-500 transition-colors">
+            <a href="#updates" onClick={handleSmoothScroll} className="text-slate-600 hover:text-orange-500 transition-colors">
               Performance Updates
             </a>
-            <a href="#thoughts" className="text-slate-600 hover:text-orange-500 transition-colors">
+            <a href="#thoughts" onClick={handleSmoothScroll} className="text-slate-600 hover:text-orange-500 transition-colors">
               My Thoughts
             </a>
-            <a href="#contact" className="text-slate-600 hover:text-orange-500 transition-colors">
-              Contact
-            </a>
           </nav>
+
+          {/* Mobile Menu Button */}
+          <button
+            className="md:hidden p-2 text-slate-600 hover:text-orange-500 transition-colors"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Toggle mobile menu"
+          >
+            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
         </div>
+
+        {/* Mobile Navigation */}
+        {isMobileMenuOpen && (
+          <div className="md:hidden border-t border-slate-200 bg-white">
+            <nav className="container mx-auto px-4 py-4 flex flex-col space-y-4">
+              <a 
+                href="#services" 
+                className="text-slate-600 hover:text-orange-500 transition-colors py-2"
+                onClick={handleSmoothScroll}
+              >
+                Services
+              </a>
+              <a 
+                href="#results" 
+                className="text-slate-600 hover:text-orange-500 transition-colors py-2"
+                onClick={handleSmoothScroll}
+              >
+                Results
+              </a>
+              <a 
+                href="#updates" 
+                className="text-slate-600 hover:text-orange-500 transition-colors py-2"
+                onClick={handleSmoothScroll}
+              >
+                Performance Updates
+              </a>
+              <a 
+                href="#thoughts" 
+                className="text-slate-600 hover:text-orange-500 transition-colors py-2"
+                onClick={handleSmoothScroll}
+              >
+                My Thoughts
+              </a>
+            </nav>
+          </div>
+        )}
       </header>
 
       {/* Hero Banner Section */}

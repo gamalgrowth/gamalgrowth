@@ -53,7 +53,7 @@ export default function SuccessPage() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
-                onClick={() => (window.location.href = "/#contact")}
+                onClick={() => (window.location.href = "/#services")}
                 className="bg-orange-500 hover:bg-orange-600 text-white"
               >
                 <Calendar className="mr-2 w-4 h-4" />
