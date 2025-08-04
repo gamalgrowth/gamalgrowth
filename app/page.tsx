@@ -544,7 +544,7 @@ export default function GamalConsultingLanding() {
                   <Search className="w-8 h-8 text-orange-600" />
                 </div>
                 <CardTitle className="text-2xl text-slate-900">POAS Power Audit</CardTitle>
-                <div className="text-3xl font-bold text-orange-600 mt-2">AED 11,010</div>
+                <div className="text-3xl font-bold text-orange-600 mt-2">AED 9,999</div>
                 <CardDescription className="text-slate-600 mt-4">
                   2 weeks to surface profit leaks & misallocated spend
                 </CardDescription>
@@ -573,7 +573,7 @@ export default function GamalConsultingLanding() {
                   className="w-full bg-orange-500 hover:bg-orange-600 text-white"
                 >
                   <CreditCard className="mr-2 w-4 h-4" />
-                  Pay Now - AED 11,010
+                  Pay Now - AED 9,999
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </Button>
                 <div className="text-center">
@@ -594,7 +594,7 @@ export default function GamalConsultingLanding() {
                   <Zap className="w-8 h-8 text-white" />
                 </div>
                 <CardTitle className="text-2xl text-slate-900">90-Day Growth Sprint</CardTitle>
-                <div className="text-3xl font-bold text-orange-600 mt-2">AED 66,060</div>
+                <div className="text-3xl font-bold text-orange-600 mt-2">AED 55,000</div>
                 <CardDescription className="text-slate-600 mt-4">
                   AI systems, creative loops, channel cleanup
                 </CardDescription>
@@ -627,7 +627,7 @@ export default function GamalConsultingLanding() {
                   className="w-full bg-orange-500 hover:bg-orange-600 text-white"
                 >
                   <CreditCard className="mr-2 w-4 h-4" />
-                  Pay Now - AED 66,060
+                  Pay Now - AED 55,000
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </Button>
                 <div className="text-center">
@@ -646,7 +646,7 @@ export default function GamalConsultingLanding() {
                   <Shield className="w-8 h-8 text-slate-600" />
                 </div>
                 <CardTitle className="text-2xl text-slate-900">Fractional Retainer</CardTitle>
-                <div className="text-3xl font-bold text-slate-600 mt-2">AED 35,232/mo</div>
+                <div className="text-3xl font-bold text-slate-600 mt-2">AED 29,360/mo</div>
                 <CardDescription className="text-slate-600 mt-4">
                   Own your KPIs weekly, no juniors, no fluff
                 </CardDescription>
@@ -675,7 +675,7 @@ export default function GamalConsultingLanding() {
                   className="w-full bg-slate-600 hover:bg-slate-700 text-white"
                 >
                   <CreditCard className="mr-2 w-4 h-4" />
-                  Subscribe - AED 35,232/mo
+                  Subscribe - AED 29,360/mo
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </Button>
                 <div className="text-center">
