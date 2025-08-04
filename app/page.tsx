@@ -29,55 +29,68 @@ import { useState, useEffect, useRef } from "react"
 export default function GamalConsultingLanding() {
   // Force deployment update - orange contact section completely removed
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const isScrollingRef = useRef(false)
+  const animationFrameRef = useRef<number | null>(null)
+
+  const smoothScroll = (targetPosition: number, duration: number) => {
+    const startPosition = window.scrollY
+    const distance = targetPosition - startPosition
+    let startTime: number | null = null
+
+    const animation = (currentTime: number) => {
+      if (startTime === null) startTime = currentTime
+      const timeElapsed = currentTime - startTime
+      const run = Math.min(timeElapsed / duration, 1)
+      const ease = (t: number) => t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t
+      const newPosition = startPosition + distance * ease(run)
+      
+      window.scrollTo(0, newPosition)
+
+      if (timeElapsed < duration) {
+        animationFrameRef.current = requestAnimationFrame(animation)
+      }
+    }
+
+    animationFrameRef.current = requestAnimationFrame(animation)
+  }
 
   const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault()
     e.stopPropagation()
 
-    const href = e.currentTarget.href
-    const targetId = href.substring(href.lastIndexOf("#") + 1)
+    if (animationFrameRef.current) {
+      cancelAnimationFrame(animationFrameRef.current)
+    }
     
     if (isMobileMenuOpen) {
       setIsMobileMenuOpen(false)
     }
 
-    const targetElement = document.getElementById(targetId)
-    if (targetElement) {
-      isScrollingRef.current = true
-      const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY
-      window.scrollTo({
-        top: elementPosition,
-        behavior: 'smooth'
-      })
-    }
+    setTimeout(() => {
+      const href = e.currentTarget.href
+      const targetId = href.substring(href.lastIndexOf("#") + 1)
+      const targetElement = document.getElementById(targetId)
+
+      if (targetElement) {
+        const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY
+        smoothScroll(elementPosition, 800) // 800ms duration
+      }
+    }, isMobileMenuOpen ? 100 : 0)
   }
 
   useEffect(() => {
     const handleWheel = () => {
-      if (isScrollingRef.current) {
-        window.scrollTo({ top: window.scrollY, behavior: "auto" }) // Stop smooth scroll
-        isScrollingRef.current = false
+      if (animationFrameRef.current) {
+        cancelAnimationFrame(animationFrameRef.current)
       }
     }
 
-    const handleScrollEnd = () => {
-      isScrollingRef.current = false
-    }
-
-    let scrollEndTimer: NodeJS.Timeout
-    const handleScroll = () => {
-      clearTimeout(scrollEndTimer)
-      scrollEndTimer = setTimeout(handleScrollEnd, 150)
-    }
-
     window.addEventListener('wheel', handleWheel)
-    window.addEventListener('scroll', handleScroll)
 
     return () => {
       window.removeEventListener('wheel', handleWheel)
-      window.removeEventListener('scroll', handleScroll)
-      clearTimeout(scrollEndTimer)
+      if (animationFrameRef.current) {
+        cancelAnimationFrame(animationFrameRef.current)
+      }
     }
   }, [])
 
