@@ -24,33 +24,36 @@ import {
   Menu,
   X,
 } from "lucide-react"
-import { useState } from "react"
+import { useState, useRef } from "react"
 
 export default function GamalConsultingLanding() {
   // Force deployment update - orange contact section completely removed
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const scrollTimeoutRef = useRef<NodeJS.Timeout | null>(null)
 
   const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault()
     const targetId = e.currentTarget.href.split("#")[1]
 
+    if (scrollTimeoutRef.current) {
+      clearTimeout(scrollTimeoutRef.current)
+    }
+
     if (isMobileMenuOpen) {
       setIsMobileMenuOpen(false)
     }
 
-    // A short delay for mobile to allow the menu to close before scrolling
-    setTimeout(
-      () => {
-        const targetElement = document.getElementById(targetId)
-        if (targetElement) {
-          window.scrollTo({
-            top: targetElement.offsetTop,
-            behavior: "smooth",
-          })
-        }
-      },
-      isMobileMenuOpen ? 100 : 0
-    )
+    const delay = isMobileMenuOpen ? 100 : 0
+
+    scrollTimeoutRef.current = setTimeout(() => {
+      const targetElement = document.getElementById(targetId)
+      if (targetElement) {
+        window.scrollTo({
+          top: targetElement.offsetTop,
+          behavior: "smooth",
+        })
+      }
+    }, delay)
   }
 
   const handleStripePayment = async (lookupKey: string, productName: string) => {
