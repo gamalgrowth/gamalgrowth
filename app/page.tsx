@@ -133,7 +133,7 @@ export default function GamalConsultingLanding() {
 
               <div className="space-y-4">
                 <Button
-                  onClick={() => handleStripePayment("one_hour_strategy_call", "One-Hour Strategy Call")}
+                  onClick={() => handleStripePayment("one_hour_strategy_call_incl_tax", "One-Hour Strategy Call")}
                   size="lg"
                   className="bg-orange-500 hover:bg-orange-600 text-white px-12 py-6 text-xl font-semibold rounded-xl shadow-xl hover:shadow-2xl transition-all cursor-pointer"
                 >
@@ -544,7 +544,7 @@ export default function GamalConsultingLanding() {
                   <Search className="w-8 h-8 text-orange-600" />
                 </div>
                 <CardTitle className="text-2xl text-slate-900">POAS Power Audit</CardTitle>
-                <div className="text-3xl font-bold text-orange-600 mt-2">AED 9,175</div>
+                <div className="text-3xl font-bold text-orange-600 mt-2">AED 9,999</div>
                 <CardDescription className="text-slate-600 mt-4">
                   2 weeks to surface profit leaks & misallocated spend
                 </CardDescription>
@@ -569,11 +569,11 @@ export default function GamalConsultingLanding() {
                   </div>
                 </div>
                 <Button
-                  onClick={() => handleStripePayment("poas_power_audit", "POAS Power Audit")}
+                  onClick={() => handleStripePayment("poas_power_audit_incl_tax", "POAS Power Audit")}
                   className="w-full bg-orange-500 hover:bg-orange-600 text-white"
                 >
                   <CreditCard className="mr-2 w-4 h-4" />
-                  Pay Now - AED 9,175
+                  Pay Now - AED 9,999
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </Button>
                 <div className="text-center">
@@ -594,7 +594,7 @@ export default function GamalConsultingLanding() {
                   <Zap className="w-8 h-8 text-white" />
                 </div>
                 <CardTitle className="text-2xl text-slate-900">90-Day Growth Sprint</CardTitle>
-                <div className="text-3xl font-bold text-orange-600 mt-2">AED 55,050</div>
+                <div className="text-3xl font-bold text-orange-600 mt-2">AED 55,000</div>
                 <CardDescription className="text-slate-600 mt-4">
                   AI systems, creative loops, channel cleanup
                 </CardDescription>
@@ -623,11 +623,11 @@ export default function GamalConsultingLanding() {
                   </div>
                 </div>
                 <Button
-                  onClick={() => handleStripePayment("ninety_day_growth_sprint", "90-Day Growth Sprint")}
+                  onClick={() => handleStripePayment("ninety_day_growth_sprint_incl_tax", "90-Day Growth Sprint")}
                   className="w-full bg-orange-500 hover:bg-orange-600 text-white"
                 >
                   <CreditCard className="mr-2 w-4 h-4" />
-                  Pay Now - AED 55,050
+                  Pay Now - AED 55,000
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </Button>
                 <div className="text-center">
@@ -671,7 +671,7 @@ export default function GamalConsultingLanding() {
                   </div>
                 </div>
                 <Button
-                  onClick={() => handleStripePayment("fractional_retainer_monthly", "Fractional Retainer")}
+                  onClick={() => handleStripePayment("fractional_retainer_monthly_incl_tax", "Fractional Retainer")}
                   className="w-full bg-slate-600 hover:bg-slate-700 text-white"
                 >
                   <CreditCard className="mr-2 w-4 h-4" />
