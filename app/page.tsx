@@ -24,7 +24,7 @@ import {
   Menu,
   X,
 } from "lucide-react"
-import { useState, useRef } from "react"
+import { useState } from "react"
 
 export default function GamalConsultingLanding() {
   // Force deployment update - orange contact section completely removed
