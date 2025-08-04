@@ -30,6 +30,22 @@ export default function GamalConsultingLanding() {
   // Force deployment update - orange contact section completely removed
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
+  const handleMobileLinkClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault()
+    const targetId = e.currentTarget.href.split("#")[1]
+    setIsMobileMenuOpen(false)
+
+    setTimeout(() => {
+      const targetElement = document.getElementById(targetId)
+      if (targetElement) {
+        window.scrollTo({
+          top: targetElement.offsetTop,
+          behavior: "smooth",
+        })
+      }
+    }, 100)
+  }
+
   const handleStripePayment = async (lookupKey: string, productName: string) => {
     try {
       const response = await fetch("/api/create-checkout-session", {
@@ -101,28 +117,28 @@ export default function GamalConsultingLanding() {
               <a 
                 href="#services" 
                 className="text-slate-600 hover:text-orange-500 transition-colors py-2"
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={handleMobileLinkClick}
               >
                 Services
               </a>
               <a 
                 href="#results" 
                 className="text-slate-600 hover:text-orange-500 transition-colors py-2"
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={handleMobileLinkClick}
               >
                 Results
               </a>
               <a 
                 href="#updates" 
                 className="text-slate-600 hover:text-orange-500 transition-colors py-2"
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={handleMobileLinkClick}
               >
                 Performance Updates
               </a>
               <a 
                 href="#thoughts" 
                 className="text-slate-600 hover:text-orange-500 transition-colors py-2"
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={handleMobileLinkClick}
               >
                 My Thoughts
               </a>
