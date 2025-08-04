@@ -21,10 +21,15 @@ import {
   Calculator,
   LineChart,
   CreditCard,
+  Menu,
+  X,
 } from "lucide-react"
+import { useState } from "react"
 
 export default function GamalConsultingLanding() {
   // Force deployment update - orange contact section completely removed
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+
   const handleStripePayment = async (lookupKey: string, productName: string) => {
     try {
       const response = await fetch("/api/create-checkout-session", {
@@ -62,6 +67,8 @@ export default function GamalConsultingLanding() {
             </div>
             <span className="text-xl font-bold text-slate-900">Gamal Growth</span>
           </div>
+          
+          {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             <a href="#services" className="text-slate-600 hover:text-orange-500 transition-colors">
               Services
@@ -75,11 +82,53 @@ export default function GamalConsultingLanding() {
             <a href="#thoughts" className="text-slate-600 hover:text-orange-500 transition-colors">
               My Thoughts
             </a>
-            <a href="#contact" className="text-slate-600 hover:text-orange-500 transition-colors">
-              Contact
-            </a>
           </nav>
+
+          {/* Mobile Menu Button */}
+          <button
+            className="md:hidden p-2 text-slate-600 hover:text-orange-500 transition-colors"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Toggle mobile menu"
+          >
+            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
         </div>
+
+        {/* Mobile Navigation */}
+        {isMobileMenuOpen && (
+          <div className="md:hidden border-t border-slate-200 bg-white">
+            <nav className="container mx-auto px-4 py-4 flex flex-col space-y-4">
+              <a 
+                href="#services" 
+                className="text-slate-600 hover:text-orange-500 transition-colors py-2"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Services
+              </a>
+              <a 
+                href="#results" 
+                className="text-slate-600 hover:text-orange-500 transition-colors py-2"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Results
+              </a>
+              <a 
+                href="#updates" 
+                className="text-slate-600 hover:text-orange-500 transition-colors py-2"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Performance Updates
+              </a>
+              <a 
+                href="#thoughts" 
+                className="text-slate-600 hover:text-orange-500 transition-colors py-2"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                My Thoughts
+              </a>
+            </nav>
+          </div>
+        )}
       </header>
 
       {/* Hero Banner Section */}
