@@ -29,31 +29,27 @@ import { useState, useRef } from "react"
 export default function GamalConsultingLanding() {
   // Force deployment update - orange contact section completely removed
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const scrollTimeoutRef = useRef<NodeJS.Timeout | null>(null)
-
   const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault()
-    const targetId = e.currentTarget.href.split("#")[1]
+    e.stopPropagation()
 
-    if (scrollTimeoutRef.current) {
-      clearTimeout(scrollTimeoutRef.current)
-    }
-
+    const href = e.currentTarget.href
+    const targetId = href.substring(href.lastIndexOf("#") + 1)
+    
     if (isMobileMenuOpen) {
       setIsMobileMenuOpen(false)
     }
 
-    const delay = isMobileMenuOpen ? 100 : 0
-
-    scrollTimeoutRef.current = setTimeout(() => {
+    requestAnimationFrame(() => {
       const targetElement = document.getElementById(targetId)
       if (targetElement) {
+        const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY
         window.scrollTo({
-          top: targetElement.offsetTop,
-          behavior: "smooth",
+          top: elementPosition,
+          behavior: 'smooth'
         })
       }
-    }, delay)
+    })
   }
 
   const handleStripePayment = async (lookupKey: string, productName: string) => {
