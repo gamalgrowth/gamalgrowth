@@ -24,11 +24,13 @@ import {
   Menu,
   X,
 } from "lucide-react"
-import { useState } from "react"
+import { useState, useEffect, useRef } from "react"
 
 export default function GamalConsultingLanding() {
   // Force deployment update - orange contact section completely removed
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const isScrollingRef = useRef(false)
+
   const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault()
     e.stopPropagation()
@@ -40,17 +42,44 @@ export default function GamalConsultingLanding() {
       setIsMobileMenuOpen(false)
     }
 
-    requestAnimationFrame(() => {
-      const targetElement = document.getElementById(targetId)
-      if (targetElement) {
-        const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY
-        window.scrollTo({
-          top: elementPosition,
-          behavior: 'smooth'
-        })
-      }
-    })
+    const targetElement = document.getElementById(targetId)
+    if (targetElement) {
+      isScrollingRef.current = true
+      const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY
+      window.scrollTo({
+        top: elementPosition,
+        behavior: 'smooth'
+      })
+    }
   }
+
+  useEffect(() => {
+    const handleWheel = () => {
+      if (isScrollingRef.current) {
+        window.scrollTo({ top: window.scrollY, behavior: "auto" }) // Stop smooth scroll
+        isScrollingRef.current = false
+      }
+    }
+
+    const handleScrollEnd = () => {
+      isScrollingRef.current = false
+    }
+
+    let scrollEndTimer: NodeJS.Timeout
+    const handleScroll = () => {
+      clearTimeout(scrollEndTimer)
+      scrollEndTimer = setTimeout(handleScrollEnd, 150)
+    }
+
+    window.addEventListener('wheel', handleWheel)
+    window.addEventListener('scroll', handleScroll)
+
+    return () => {
+      window.removeEventListener('wheel', handleWheel)
+      window.removeEventListener('scroll', handleScroll)
+      clearTimeout(scrollEndTimer)
+    }
+  }, [])
 
   const handleStripePayment = async (lookupKey: string, productName: string) => {
     try {
