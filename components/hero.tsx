@@ -36,21 +36,20 @@ export default function Hero() {
   }
 
   return (
-    <section className="relative bg-slate-900 text-white overflow-hidden min-h-[500px] md:min-h-[700px] flex items-center">
+    <section className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden min-h-[500px] md:min-h-[700px]">
       <div className="absolute inset-0 w-full h-full">
-        <div className="absolute inset-0 bg-black/60 z-10" />
         <picture className="absolute inset-0 w-full h-full">
           <source media="(min-width: 1024px)" srcSet="/images/Gamal-photo-1.png" />
           <source media="(min-width: 768px)" srcSet="/images/Gamal-photo-2.png" />
           <img
             src="/images/Gamal-photo-3.png"
             alt="Background"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-center"
           />
         </picture>
       </div>
       
-      <div className="relative container mx-auto px-4 z-20">
+      <div className="relative container mx-auto px-4 z-20 py-24">
         <div className="max-w-3xl">
           <div className="space-y-8">
             <div className="space-y-6">
