@@ -9,12 +9,6 @@ import {
 } from "lucide-react"
 import { useState, useEffect } from "react"
 
-const images = [
-  "/Gamal-photo-1.png",
-  "/Gamal-photo-2.png",
-  "/Gamal-photo-3.png",
-]
-
 const texts = {
   "/Gamal-photo-1.png": {
     badge: "E-commerce Growth Specialist",
@@ -47,6 +41,12 @@ const texts = {
     ],
   },
 }
+
+const images: (keyof typeof texts)[] = [
+  "/Gamal-photo-1.png",
+  "/Gamal-photo-2.png",
+  "/Gamal-photo-3.png",
+]
 
 export default function Hero() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
