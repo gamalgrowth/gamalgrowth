@@ -31,7 +31,7 @@ export default function PerformanceUpdatesPage() {
   
   const [page, setPage] = useState(1);
   const [query, setQuery] = useState('');
-  const [category, setCategory] = useState('');
+  const [category] = useState('');
   
   const [searchInput, setSearchInput] = useState('');
 
