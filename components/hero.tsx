@@ -10,7 +10,7 @@ import {
 import { useState, useEffect } from "react"
 
 const texts = {
-  "/Gamal-photo-1.png": {
+  "/images/Gamal-photo-1.png": {
     badge: "E-commerce Growth Specialist",
     title: "Scale Your Brand Profitably",
     description: "I help 7-8 figure MENA e-commerce businesses achieve sustainable growth through bespoke performance marketing strategies.",
@@ -20,7 +20,7 @@ const texts = {
       { value: "50M+", label: "Managed Ad Spend" },
     ],
   },
-  "/Gamal-photo-2.png": {
+  "/images/Gamal-photo-2.png": {
     badge: "Fractional CMO Services",
     title: "Expert Leadership On-Demand",
     description: "Get the strategic guidance of a seasoned CMO without the full-time overhead. Perfect for scaling businesses.",
@@ -30,7 +30,7 @@ const texts = {
       { value: "100%", label: "Focus on Your KPIs" },
     ],
   },
-  "/Gamal-photo-3.png": {
+  "/images/Gamal-photo-3.png": {
     badge: "AI-Powered Marketing",
     title: "Data-Driven Decisions",
     description: "Leverage the power of AI to unlock hidden insights in your data and build a resilient marketing engine for the future.",
@@ -43,9 +43,9 @@ const texts = {
 }
 
 const images: (keyof typeof texts)[] = [
-  "/Gamal-photo-1.png",
-  "/Gamal-photo-2.png",
-  "/Gamal-photo-3.png",
+  "/images/Gamal-photo-1.png",
+  "/images/Gamal-photo-2.png",
+  "/images/Gamal-photo-3.png",
 ]
 
 export default function Hero() {
