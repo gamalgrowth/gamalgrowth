@@ -1,0 +1,67 @@
+# Task ID: 4
+# Title: Stage 1: Performance Marketing Updates Scraper
+# Status: pending
+# Dependencies: None
+# Priority: high
+# Description: Build a system to automatically scrape, store, and display timely performance marketing news from reputable sources.
+# Details:
+
+
+# Test Strategy:
+
+
+# Subtasks:
+## 1. Understand the source [pending]
+### Dependencies: None
+### Description: Open a few Swipe Insight pages and inspect the HTML. Identify the selectors for headline, timestamp, category, summary and links. Note how pagination or infinite scroll is handled.
+### Details:
+
+
+## 2. Design your UpdateItem model [pending]
+### Dependencies: None
+### Description: List fields: title, category, source, publishedAt, summary, url, thumbnail, scrapedAt. Sketch the schema in your chosen ORM/ODM. Write a migration to create the corresponding table/collection.
+### Details:
+
+
+## 3. Write the scraper script [pending]
+### Dependencies: None
+### Description: Choose a scraping environment: Node + Cheerio or Python + BeautifulSoup. Fetch the first page’s HTML using an HTTP client. Parse out the data using the selectors you identified. Save each parsed item to the database via your model.
+### Details:
+
+
+## 4. Handle pagination [pending]
+### Dependencies: None
+### Description: Detect “next page” links or parameters in the HTML. Loop through additional pages until you hit a stopping condition (e.g., no more pages or entries older than a certain date). Insert a delay between requests to avoid hammering the source.
+### Details:
+
+
+## 5. Prevent duplicates [pending]
+### Dependencies: None
+### Description: Before saving, check if an entry with the same URL already exists in your database. Skip saving duplicate items or update the existing record if necessary.
+### Details:
+
+
+## 6. Schedule the scraper [pending]
+### Dependencies: None
+### Description: Set up a cron job or serverless scheduled function to run the script at regular intervals (e.g., every 6 hours). Log start, completion and any errors. Configure environment variables for frequency.
+### Details:
+
+
+## 7. Expose the data [pending]
+### Dependencies: None
+### Description: Create API endpoints to retrieve the latest updates and to fetch paginated lists. Support filtering by category and basic keyword search. Implement pagination parameters (page number, items per page).
+### Details:
+
+
+## 8. Build the front-end components [pending]
+### Dependencies: None
+### Description: Add a home page section that pulls and displays the three most recent updates with categories and relative timestamps. Create a dedicated “All Updates” page that lists everything with filters and search. Make each entry link out to the original article (with target="_blank").
+### Details:
+
+
+## 9. Add SEO markup and error handling [pending]
+### Dependencies: None
+### Description: Insert structured data (NewsArticle schema) for each update. Catch and log scraper errors; display a friendly message if updates can’t load.
+### Details:
+
+

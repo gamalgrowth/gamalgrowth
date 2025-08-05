@@ -1,0 +1,352 @@
+{
+  "master": {
+    "tasks": [
+      {
+        "id": 1,
+        "title": "Stage 1: Implement Performance Marketing Updates Scraper",
+        "description": "Build the core infrastructure to automatically scrape, store, and display timely performance marketing news from reputable sources. This includes setting up the scraper, defining the data model, creating API endpoints, and building the initial frontend components.",
+        "details": "",
+        "testStrategy": "",
+        "status": "pending",
+        "dependencies": [],
+        "priority": "high",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Set Up and Configure Web Scraper",
+            "description": "Develop and configure a robust web scraper to extract performance marketing news from reputable sources, ensuring compliance with legal and ethical standards.",
+            "dependencies": [],
+            "details": "Select appropriate scraping tools (e.g., Scrapy, Selenium, or headless browsers for dynamic sites). Implement proxy rotation and request throttling to avoid IP bans. Integrate CAPTCHA handling if necessary. Ensure the scraper targets a curated list of reputable news sources and adheres to their terms of service. Document the scraping logic and maintainability practices.",
+            "status": "pending",
+            "testStrategy": "Run the scraper against test sources, verify data extraction accuracy, and monitor for IP blocks or CAPTCHAs. Validate compliance with legal requirements."
+          },
+          {
+            "id": 2,
+            "title": "Design and Implement Data Model and Storage",
+            "description": "Define the data schema for storing scraped news articles and set up a scalable storage solution.",
+            "dependencies": [],
+            "details": "Analyze the structure of the extracted data (e.g., title, summary, source, publication date, URL). Design a normalized schema in a relational database (e.g., PostgreSQL) or a document store (e.g., MongoDB) as appropriate. Implement the storage layer and ensure efficient indexing for fast retrieval. Include fields for metadata such as scrape timestamp and source reliability.",
+            "status": "pending",
+            "testStrategy": "Insert sample data and verify schema integrity, indexing, and query performance. Ensure data consistency and support for future schema evolution."
+          },
+          {
+            "id": 3,
+            "title": "Develop Data Processing and Validation Pipeline",
+            "description": "Implement a processing pipeline to clean, validate, and enrich the scraped data before storage.",
+            "dependencies": [],
+            "details": "Use Python libraries (e.g., Pandas) to clean and normalize text, remove duplicates, and validate required fields. Add logic for deduplication, error handling, and logging. Optionally, enrich articles with tags or sentiment analysis. Ensure the pipeline is modular and can be triggered automatically after scraping.",
+            "status": "pending",
+            "testStrategy": "Feed raw scraped data through the pipeline and verify output quality, completeness, and error handling. Check for proper logging and alerting on validation failures."
+          },
+          {
+            "id": 4,
+            "title": "Create API Endpoints for News Retrieval",
+            "description": "Build RESTful API endpoints to expose the processed news data for frontend consumption.",
+            "dependencies": [],
+            "details": "Design and implement endpoints for listing news articles, filtering by date/source, and retrieving article details. Use a web framework (e.g., FastAPI, Express.js). Secure the endpoints and document the API. Optimize for pagination and performance.",
+            "status": "pending",
+            "testStrategy": "Write unit and integration tests for all endpoints. Use API testing tools (e.g., Postman) to verify correct responses, filtering, and error handling."
+          },
+          {
+            "id": 5,
+            "title": "Develop Initial Frontend Components for News Display",
+            "description": "Build the initial frontend components to display the latest performance marketing news to users.",
+            "dependencies": [],
+            "details": "Implement a responsive UI using a modern frontend framework (e.g., React, Vue). Create components for news lists, article previews, and detail views. Integrate with the backend API for dynamic data loading. Ensure accessibility and basic styling.",
+            "status": "pending",
+            "testStrategy": "Test UI components for correct rendering, data loading, and responsiveness. Perform user acceptance testing to validate usability and display accuracy."
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Stage 2: Implement Blog & \"My Thoughts\" Platform",
+        "description": "Build a full-featured, secure, and easy-to-use content management system (CMS) that empowers Gamal to publish original articles, share his expertise, and grow his personal brand.",
+        "details": "",
+        "testStrategy": "",
+        "status": "pending",
+        "dependencies": [],
+        "priority": "medium",
+        "subtasks": []
+      },
+      {
+        "id": 3,
+        "title": "Stage 3: Implement Newsletter System",
+        "description": "Design and implement a scalable newsletter system that captures subscriber information, automates weekly content delivery, and provides analytics to measure engagement and growth.",
+        "details": "",
+        "testStrategy": "",
+        "status": "pending",
+        "dependencies": [],
+        "priority": "medium",
+        "subtasks": []
+      },
+      {
+        "id": 4,
+        "title": "Stage 1: Performance Marketing Updates Scraper",
+        "description": "Build a system to automatically scrape, store, and display timely performance marketing news from reputable sources.",
+        "details": "",
+        "testStrategy": "",
+        "status": "pending",
+        "dependencies": [],
+        "priority": "high",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Understand the source",
+            "description": "Open a few Swipe Insight pages and inspect the HTML. Identify the selectors for headline, timestamp, category, summary and links. Note how pagination or infinite scroll is handled.",
+            "details": "",
+            "status": "pending",
+            "dependencies": [],
+            "parentTaskId": 4
+          },
+          {
+            "id": 2,
+            "title": "Design your UpdateItem model",
+            "description": "List fields: title, category, source, publishedAt, summary, url, thumbnail, scrapedAt. Sketch the schema in your chosen ORM/ODM. Write a migration to create the corresponding table/collection.",
+            "details": "",
+            "status": "pending",
+            "dependencies": [],
+            "parentTaskId": 4
+          },
+          {
+            "id": 3,
+            "title": "Write the scraper script",
+            "description": "Choose a scraping environment: Node + Cheerio or Python + BeautifulSoup. Fetch the first page’s HTML using an HTTP client. Parse out the data using the selectors you identified. Save each parsed item to the database via your model.",
+            "details": "",
+            "status": "pending",
+            "dependencies": [],
+            "parentTaskId": 4
+          },
+          {
+            "id": 4,
+            "title": "Handle pagination",
+            "description": "Detect “next page” links or parameters in the HTML. Loop through additional pages until you hit a stopping condition (e.g., no more pages or entries older than a certain date). Insert a delay between requests to avoid hammering the source.",
+            "details": "",
+            "status": "pending",
+            "dependencies": [],
+            "parentTaskId": 4
+          },
+          {
+            "id": 5,
+            "title": "Prevent duplicates",
+            "description": "Before saving, check if an entry with the same URL already exists in your database. Skip saving duplicate items or update the existing record if necessary.",
+            "details": "",
+            "status": "pending",
+            "dependencies": [],
+            "parentTaskId": 4
+          },
+          {
+            "id": 6,
+            "title": "Schedule the scraper",
+            "description": "Set up a cron job or serverless scheduled function to run the script at regular intervals (e.g., every 6 hours). Log start, completion and any errors. Configure environment variables for frequency.",
+            "details": "",
+            "status": "pending",
+            "dependencies": [],
+            "parentTaskId": 4
+          },
+          {
+            "id": 7,
+            "title": "Expose the data",
+            "description": "Create API endpoints to retrieve the latest updates and to fetch paginated lists. Support filtering by category and basic keyword search. Implement pagination parameters (page number, items per page).",
+            "details": "",
+            "status": "pending",
+            "dependencies": [],
+            "parentTaskId": 4
+          },
+          {
+            "id": 8,
+            "title": "Build the front-end components",
+            "description": "Add a home page section that pulls and displays the three most recent updates with categories and relative timestamps. Create a dedicated “All Updates” page that lists everything with filters and search. Make each entry link out to the original article (with target=\"_blank\").",
+            "details": "",
+            "status": "pending",
+            "dependencies": [],
+            "parentTaskId": 4
+          },
+          {
+            "id": 9,
+            "title": "Add SEO markup and error handling",
+            "description": "Insert structured data (NewsArticle schema) for each update. Catch and log scraper errors; display a friendly message if updates can’t load.",
+            "details": "",
+            "status": "pending",
+            "dependencies": [],
+            "parentTaskId": 4
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "title": "Stage 2: Set Up the Blog / “My Thoughts”",
+        "description": "Build a full-featured, secure, and easy-to-use content management system (CMS) that empowers Gamal to publish original articles, share his expertise, and grow his personal brand.",
+        "details": "",
+        "testStrategy": "",
+        "status": "pending",
+        "dependencies": [],
+        "priority": "medium",
+        "subtasks": []
+      },
+      {
+        "id": 6,
+        "title": "Stage 3: Build the Newsletter System",
+        "description": "Design and implement a scalable newsletter system that captures subscriber information, automates weekly content delivery, and provides analytics to measure engagement and growth.",
+        "details": "",
+        "testStrategy": "",
+        "status": "pending",
+        "dependencies": [],
+        "priority": "low",
+        "subtasks": []
+      }
+    ],
+    "metadata": {
+      "description": "Default task list",
+      "created_at": "2024-08-01T12:00:00.000Z",
+      "created": "2025-08-05T08:28:51.903Z",
+      "updated": "2025-08-05T11:49:53.163Z"
+    }
+  },
+  "feature-scraper": {
+    "tasks": [
+      {
+        "id": 2,
+        "title": "Stage 2: Implement Blog & \"My Thoughts\" Platform",
+        "description": "Build a full-featured, secure, and easy-to-use content management system (CMS) that empowers Gamal to publish original articles, share his expertise, and grow his personal brand.",
+        "details": "",
+        "testStrategy": "",
+        "status": "pending",
+        "dependencies": [],
+        "priority": "medium",
+        "subtasks": []
+      },
+      {
+        "id": 3,
+        "title": "Stage 3: Implement Newsletter System",
+        "description": "Design and implement a scalable newsletter system that captures subscriber information, automates weekly content delivery, and provides analytics to measure engagement and growth.",
+        "details": "",
+        "testStrategy": "",
+        "status": "pending",
+        "dependencies": [],
+        "priority": "medium",
+        "subtasks": []
+      },
+      {
+        "id": 4,
+        "title": "Stage 1: Performance Marketing Updates Scraper",
+        "description": "Build a system to automatically scrape, store, and display timely performance marketing news from reputable sources.",
+        "details": "",
+        "testStrategy": "",
+        "status": "pending",
+        "dependencies": [],
+        "priority": "high",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Understand the source",
+            "description": "Open a few Swipe Insight pages and inspect the HTML. Identify the selectors for headline, timestamp, category, summary and links. Note how pagination or infinite scroll is handled.",
+            "details": "",
+            "status": "done",
+            "dependencies": [],
+            "parentTaskId": 4
+          },
+          {
+            "id": 2,
+            "title": "Design your UpdateItem model",
+            "description": "List fields: title, category, source, publishedAt, summary, url, thumbnail, scrapedAt. Sketch the schema in your chosen ORM/ODM. Write a migration to create the corresponding table/collection.",
+            "details": "",
+            "status": "done",
+            "dependencies": [],
+            "parentTaskId": 4
+          },
+          {
+            "id": 3,
+            "title": "Write the scraper script",
+            "description": "Choose a scraping environment: Node + Cheerio or Python + BeautifulSoup. Fetch the first page’s HTML using an HTTP client. Parse out the data using the selectors you identified. Save each parsed item to the database via your model.",
+            "details": "<info added on 2025-08-05T11:56:29.500Z>\nThe scraper script must be rewritten to use a headless browser automation library such as Puppeteer, enabling it to execute JavaScript and bypass Vercel’s security checkpoint. Ensure the script launches a headless browser instance, navigates to the target page, waits for the necessary content to load, and then extracts the required data. Consider implementing stealth plugins or anti-bot evasion techniques to reduce the likelihood of detection and blocking.\n</info added on 2025-08-05T11:56:29.500Z>",
+            "status": "done",
+            "dependencies": [],
+            "parentTaskId": 4
+          },
+          {
+            "id": 4,
+            "title": "Handle pagination",
+            "description": "Detect “next page” links or parameters in the HTML. Loop through additional pages until you hit a stopping condition (e.g., no more pages or entries older than a certain date). Insert a delay between requests to avoid hammering the source.",
+            "details": "",
+            "status": "done",
+            "dependencies": [],
+            "parentTaskId": 4
+          },
+          {
+            "id": 5,
+            "title": "Prevent duplicates",
+            "description": "Before saving, check if an entry with the same URL already exists in your database. Skip saving duplicate items or update the existing record if necessary.",
+            "details": "",
+            "status": "done",
+            "dependencies": [],
+            "parentTaskId": 4
+          },
+          {
+            "id": 6,
+            "title": "Schedule the scraper",
+            "description": "Set up a cron job or serverless scheduled function to run the script at regular intervals (e.g., every 6 hours). Log start, completion and any errors. Configure environment variables for frequency.",
+            "details": "",
+            "status": "pending",
+            "dependencies": [],
+            "parentTaskId": 4
+          },
+          {
+            "id": 7,
+            "title": "Expose the data",
+            "description": "Create API endpoints to retrieve the latest updates and to fetch paginated lists. Support filtering by category and basic keyword search. Implement pagination parameters (page number, items per page).",
+            "details": "",
+            "status": "pending",
+            "dependencies": [],
+            "parentTaskId": 4
+          },
+          {
+            "id": 8,
+            "title": "Build the front-end components",
+            "description": "Add a home page section that pulls and displays the three most recent updates with categories and relative timestamps. Create a dedicated “All Updates” page that lists everything with filters and search. Make each entry link out to the original article (with target=\"_blank\").",
+            "details": "",
+            "status": "pending",
+            "dependencies": [],
+            "parentTaskId": 4
+          },
+          {
+            "id": 9,
+            "title": "Add SEO markup and error handling",
+            "description": "Insert structured data (NewsArticle schema) for each update. Catch and log scraper errors; display a friendly message if updates can’t load.",
+            "details": "",
+            "status": "pending",
+            "dependencies": [],
+            "parentTaskId": 4
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "title": "Stage 2: Set Up the Blog / “My Thoughts”",
+        "description": "Build a full-featured, secure, and easy-to-use content management system (CMS) that empowers Gamal to publish original articles, share his expertise, and grow his personal brand.",
+        "details": "",
+        "testStrategy": "",
+        "status": "pending",
+        "dependencies": [],
+        "priority": "medium",
+        "subtasks": []
+      },
+      {
+        "id": 6,
+        "title": "Stage 3: Build the Newsletter System",
+        "description": "Design and implement a scalable newsletter system that captures subscriber information, automates weekly content delivery, and provides analytics to measure engagement and growth.",
+        "details": "",
+        "testStrategy": "",
+        "status": "pending",
+        "dependencies": [],
+        "priority": "low",
+        "subtasks": []
+      }
+    ],
+    "metadata": {
+      "created": "2025-08-05T11:51:24.882Z",
+      "updated": "2025-08-05T14:55:49.918Z",
+      "description": "Tag created on 8/5/2025"
+    }
+  }
+}
