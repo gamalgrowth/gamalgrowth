@@ -7,61 +7,8 @@ import {
   CreditCard,
   Clock,
 } from "lucide-react"
-import { useState, useEffect } from "react"
-
-const texts = {
-  "/images/Gamal-photo-1.png": {
-    badge: "E-commerce Growth Specialist",
-    title: "Scale Your Brand Profitably",
-    description: "I help 7-8 figure MENA e-commerce businesses achieve sustainable growth through bespoke performance marketing strategies.",
-    stats: [
-      { value: "+30%", label: "Average Profit Uplift" },
-      { value: "12+", label: "Years of Experience" },
-      { value: "50M+", label: "Managed Ad Spend" },
-    ],
-  },
-  "/images/Gamal-photo-2.png": {
-    badge: "Fractional CMO Services",
-    title: "Expert Leadership On-Demand",
-    description: "Get the strategic guidance of a seasoned CMO without the full-time overhead. Perfect for scaling businesses.",
-    stats: [
-      { value: "2x", label: "Faster Growth" },
-      { value: "40%", label: "Improved Efficiency" },
-      { value: "100%", label: "Focus on Your KPIs" },
-    ],
-  },
-  "/images/Gamal-photo-3.png": {
-    badge: "AI-Powered Marketing",
-    title: "Data-Driven Decisions",
-    description: "Leverage the power of AI to unlock hidden insights in your data and build a resilient marketing engine for the future.",
-    stats: [
-      { value: "24/7", label: "Optimization" },
-      { value: "95%", label: "Prediction Accuracy" },
-      { value: "3x", label: "More Creative Insights" },
-    ],
-  },
-}
-
-const images: (keyof typeof texts)[] = [
-  "/images/Gamal-photo-1.png",
-  "/images/Gamal-photo-2.png",
-  "/images/Gamal-photo-3.png",
-]
 
 export default function Hero() {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0)
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length)
-    }, 5000)
-
-    return () => clearInterval(interval)
-  }, [])
-
-  const currentImage = images[currentImageIndex]
-  const currentText = texts[currentImage]
-
   const handleStripePayment = async (lookupKey: string, productName: string) => {
     try {
       const response = await fetch("/api/create-checkout-session", {
@@ -92,16 +39,15 @@ export default function Hero() {
     <section className="relative bg-slate-900 text-white overflow-hidden min-h-[500px] md:min-h-[700px] flex items-center">
       <div className="absolute inset-0 w-full h-full">
         <div className="absolute inset-0 bg-black/60 z-10" />
-        {images.map((src, index) => (
+        <picture className="absolute inset-0 w-full h-full">
+          <source media="(min-width: 1024px)" srcSet="/images/Gamal-photo-1.png" />
+          <source media="(min-width: 768px)" srcSet="/images/Gamal-photo-2.png" />
           <img
-            key={src}
-            src={src}
-            alt={`Background Image ${index + 1}`}
-            className={`w-full h-full object-cover absolute inset-0 transition-opacity duration-1000 ${
-              index === currentImageIndex ? "opacity-100" : "opacity-0"
-            }`}
+            src="/images/Gamal-photo-3.png"
+            alt="Background"
+            className="w-full h-full object-cover"
           />
-        ))}
+        </picture>
       </div>
       
       <div className="relative container mx-auto px-4 z-20">
@@ -110,27 +56,38 @@ export default function Hero() {
             <div className="space-y-6">
               <div className="inline-block">
                 <Badge className="bg-orange-500/20 text-orange-400 border-orange-500/30 px-4 py-2 text-sm">
-                  {currentText.badge}
+                  Mohamed Gamal, MBA • $100M+ Ad Spend Managed
                 </Badge>
               </div>
 
               <h1 className="text-6xl lg:text-8xl font-bold leading-tight">
-                {currentText.title}
+                Turn Ad Spend into <span className="text-orange-500 relative">Profit-Fuel</span>
               </h1>
 
               <p className="text-xl text-slate-300 leading-relaxed max-w-2xl">
-                {currentText.description}
+                Fractional Head of Performance Marketing for 7-8-figure MENA e-commerce brands. AI-driven systems
+                wired directly to your P&L.
               </p>
 
               <div className="flex flex-wrap items-center gap-8 text-orange-400 text-lg">
-                {currentText.stats.map((stat, index) => (
-                  <div key={index} className="flex items-center space-x-2">
-                    <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
-                    <span>
-                      <span className="text-orange-500 font-bold text-2xl">{stat.value}</span> {stat.label}
-                    </span>
-                  </div>
-                ))}
+                <div className="flex items-center space-x-2">
+                  <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
+                  <span>
+                    <span className="text-orange-500 font-bold text-2xl">+25%</span> ROAS in 6 months
+                  </span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
+                  <span>
+                    <span className="text-orange-500 font-bold text-2xl">14</span> years MENA experience
+                  </span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
+                  <span>
+                    <span className="text-orange-500 font-bold text-2xl">2</span> audit slots/month
+                  </span>
+                </div>
               </div>
             </div>
 
