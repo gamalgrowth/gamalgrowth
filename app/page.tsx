@@ -25,9 +25,9 @@ import {
   X,
 } from "lucide-react"
 import { useState, useEffect, useRef } from "react"
+import Link from "next/link"
 
 export default function GamalConsultingLanding() {
-  // Force deployment update - orange contact section completely removed
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const animationFrameRef = useRef<number | null>(null)
   const isProgrammaticScrollRef = useRef(false)
@@ -146,12 +146,12 @@ export default function GamalConsultingLanding() {
             <a href="#results" onClick={handleSmoothScroll} className="text-slate-600 hover:text-orange-500 transition-colors">
               Results
             </a>
-            <a href="#updates" onClick={handleSmoothScroll} className="text-slate-600 hover:text-orange-500 transition-colors">
+            <Link href="/performance-updates" className="text-slate-600 hover:text-orange-500 transition-colors">
               Performance Updates
-            </a>
-            <a href="#thoughts" onClick={handleSmoothScroll} className="text-slate-600 hover:text-orange-500 transition-colors">
+            </Link>
+            <Link href="/my-thoughts" className="text-slate-600 hover:text-orange-500 transition-colors">
               My Thoughts
-            </a>
+            </Link>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -182,20 +182,12 @@ export default function GamalConsultingLanding() {
               >
                 Results
               </a>
-              <a 
-                href="#updates" 
-                className="text-slate-600 hover:text-orange-500 transition-colors py-2"
-                onClick={handleSmoothScroll}
-              >
+              <Link href="/performance-updates" className="text-slate-600 hover:text-orange-500 transition-colors py-2">
                 Performance Updates
-              </a>
-              <a 
-                href="#thoughts" 
-                className="text-slate-600 hover:text-orange-500 transition-colors py-2"
-                onClick={handleSmoothScroll}
-              >
+              </Link>
+              <Link href="/my-thoughts" className="text-slate-600 hover:text-orange-500 transition-colors py-2">
                 My Thoughts
-              </a>
+              </Link>
             </nav>
           </div>
         )}
