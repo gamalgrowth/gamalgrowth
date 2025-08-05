@@ -49,16 +49,10 @@ export default function Hero() {
         </picture>
       </div>
       
-      <div className="relative container mx-auto px-4 z-20 py-24">
+      <div className="relative container mx-auto px-4 z-20 pt-56 pb-12 md:py-24">
         <div className="max-w-3xl">
           <div className="space-y-8">
             <div className="space-y-6">
-              <div className="inline-block">
-                <Badge className="bg-orange-500/20 text-orange-400 border-orange-500/30 px-4 py-2 text-sm">
-                  Mohamed Gamal, MBA • $100M+ Ad Spend Managed
-                </Badge>
-              </div>
-
               <h1 className="text-6xl lg:text-8xl font-bold leading-tight">
                 Turn Ad Spend into <span className="text-orange-500 relative">Profit-Fuel</span>
               </h1>
@@ -106,6 +100,14 @@ export default function Hero() {
               </p>
             </div>
           </div>
+        </div>
+      </div>
+
+      <div className="absolute bottom-8 left-0 right-0">
+        <div className="container mx-auto px-4">
+            <Badge className="bg-orange-500/20 text-orange-400 border-orange-500/30 px-4 py-2 text-sm">
+                Mohamed Gamal, MBA • $100M+ Ad Spend Managed
+            </Badge>
         </div>
       </div>
     </section>
