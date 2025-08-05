@@ -103,13 +103,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="absolute bottom-8 left-0 right-0">
-        <div className="container mx-auto px-4">
-            <Badge className="bg-orange-500/20 text-orange-400 border-orange-500/30 px-4 py-2 text-sm">
-                Mohamed Gamal, MBA • $100M+ Ad Spend Managed
-            </Badge>
-        </div>
-      </div>
+
     </section>
   )
 }
