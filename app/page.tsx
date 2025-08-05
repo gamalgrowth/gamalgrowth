@@ -27,6 +27,8 @@ import {
 import { useState, useEffect, useRef } from "react"
 import Link from "next/link"
 
+import RecentUpdates from "@/components/recent-updates"
+
 export default function GamalConsultingLanding() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const animationFrameRef = useRef<number | null>(null)
@@ -923,78 +925,14 @@ export default function GamalConsultingLanding() {
               Latest insights and trends scraped from across the web to keep you ahead of the curve.
             </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card className="bg-white border-slate-200 hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className="flex items-center justify-between mb-2">
-                  <Badge className="bg-orange-100 text-orange-700">Meta Ads</Badge>
-                  <span className="text-sm text-slate-500">2 hours ago</span>
-                </div>
-                <CardTitle className="text-xl leading-tight">
-                  Meta&apos;s New AI Creative Tools Show 23% Better Performance
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-slate-600 mb-4">
-                  Latest data reveals Meta&apos;s AI-powered creative optimization is delivering significant improvements in
-                  ROAS across e-commerce verticals...
-                </p>
-                <Button variant="outline" size="sm" className="w-full bg-transparent">
-                  Read Full Update
-                  <ArrowRight className="ml-2 w-3 h-3" />
-                </Button>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-white border-slate-200 hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className="flex items-center justify-between mb-2">
-                  <Badge className="bg-blue-100 text-blue-700">Google Ads</Badge>
-                  <span className="text-sm text-slate-500">5 hours ago</span>
-                </div>
-                <CardTitle className="text-xl leading-tight">
-                  PMax Campaign Structure Changes Impact MENA Markets
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-slate-600 mb-4">
-                  Google&apos;s latest Performance Max updates are showing different results in MENA markets compared to
-                  US/EU benchmarks...
-                </p>
-                <Button variant="outline" size="sm" className="w-full bg-transparent">
-                  Read Full Update
-                  <ArrowRight className="ml-2 w-3 h-3" />
-                </Button>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-white border-slate-200 hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className="flex items-center justify-between mb-2">
-                  <Badge className="bg-green-100 text-green-700">Industry News</Badge>
-                  <span className="text-sm text-slate-500">1 day ago</span>
-                </div>
-                <CardTitle className="text-xl leading-tight">
-                  iOS 17.2 Attribution Changes: What E-commerce Needs to Know
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-slate-600 mb-4">
-                  Apple&apos;s latest privacy updates are reshaping attribution models. Here&apos;s how to adapt your measurement
-                  strategy...
-                </p>
-                <Button variant="outline" size="sm" className="w-full bg-transparent">
-                  Read Full Update
-                  <ArrowRight className="ml-2 w-3 h-3" />
-                </Button>
-              </CardContent>
-            </Card>
-          </div>
+                    <RecentUpdates />
           <div className="text-center mt-12">
-            <Button variant="outline" className="px-8 py-3 bg-transparent">
-              View All Updates
-              <ArrowRight className="ml-2 w-4 h-4" />
-            </Button>
+            <Link href="/performance-updates" passHref>
+              <Button variant="outline" className="px-8 py-3 bg-transparent">
+                View All Updates
+                <ArrowRight className="ml-2 w-4 h-4" />
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
