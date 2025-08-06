@@ -106,12 +106,9 @@ export default function Hero() {
             </div>
           </div>
         </div>
-        <div className="absolute right-4 bottom-4 flex items-center gap-2">
-          <Image src="/logos/GMG.png" alt="GMG Logo" width={50} height={20} className="h-5 w-auto" />
-          <div className="flex flex-col items-start text-left">
-            <p className="text-[9px] font-bold text-white leading-tight">Ex-Director of Growth</p>
-            <p className="text-[9px] text-slate-400 leading-tight">GMG - Gulf Marketing Group</p>
-          </div>
+        <div className="absolute right-4 bottom-4 flex flex-col items-start text-left">
+          <p className="text-[9px] font-bold text-white leading-tight">Ex-Director of Growth</p>
+          <p className="text-[9px] text-slate-400 leading-tight">GMG - Gulf Marketing Group</p>
         </div>
       </div>
     </section>
