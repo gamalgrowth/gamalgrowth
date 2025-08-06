@@ -27,6 +27,9 @@ import {
 import { useState, useEffect, useRef } from "react"
 import Link from "next/link"
 
+import RecentUpdates from "@/components/recent-updates"
+import Hero from "@/components/hero"
+
 export default function GamalConsultingLanding() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const animationFrameRef = useRef<number | null>(null)
@@ -193,87 +196,7 @@ export default function GamalConsultingLanding() {
         )}
       </header>
 
-      {/* Hero Banner Section */}
-      <section className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden min-h-[500px] md:min-h-[700px]">
-        {/* Large Transparent Photo Overlay */}
-        <div className="absolute right-0 top-0 w-full h-full opacity-25">
-          <img src="/images/Gamal-photo.png" alt="Mohamed Gamal" className="w-full h-full object-contain object-right" />
-        </div>
-
-        {/* Content */}
-        <div className="relative container mx-auto px-4 py-24">
-          <div className="max-w-3xl">
-            <div className="space-y-8">
-              <div className="space-y-6">
-                <div className="inline-block">
-                  <Badge className="bg-orange-500/20 text-orange-400 border-orange-500/30 px-4 py-2 text-sm">
-                    Mohamed Gamal, MBA • $100M+ Ad Spend Managed
-                  </Badge>
-                </div>
-
-                <h1 className="text-6xl lg:text-8xl font-bold leading-tight">
-                  Turn Ad Spend into <span className="text-orange-500 relative">Profit-Fuel</span>
-                </h1>
-
-                <p className="text-xl text-slate-300 leading-relaxed max-w-2xl">
-                  Fractional Head of Performance Marketing for 7-8-figure MENA e-commerce brands. AI-driven systems
-                  wired directly to your P&L.
-                </p>
-
-                <div className="flex flex-wrap items-center gap-8 text-orange-400 text-lg">
-                  <div className="flex items-center space-x-2">
-                    <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
-                    <span>
-                      <span className="text-orange-500 font-bold text-2xl">+25%</span> ROAS in 6 months
-                    </span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
-                    <span>
-                      <span className="text-orange-500 font-bold text-2xl">14</span> years MENA experience
-                    </span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
-                    <span>
-                      <span className="text-orange-500 font-bold text-2xl">2</span> audit slots/month
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              <div className="space-y-4">
-                <Button
-                  onClick={() => handleStripePayment("one_hour_strategy_call_incl_tax", "One-Hour Strategy Call")}
-                  size="lg"
-                  className="bg-orange-500 hover:bg-orange-600 text-white px-12 py-6 text-xl font-semibold rounded-xl shadow-xl hover:shadow-2xl transition-all cursor-pointer"
-                >
-                  <CreditCard className="mr-3 w-6 h-6" />
-                  Book a One-Hour Strategy Call - AED 999
-                  <ArrowRight className="ml-3 w-6 h-6" />
-                </Button>
-                <p className="text-sm text-slate-400 flex items-center space-x-2">
-                  <Clock className="w-4 h-4" />
-                  <span>Limited availability • Targeted expert advice</span>
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Floating Credential Card */}
-          <div className="absolute bottom-8 right-8 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 max-w-sm">
-            <div className="flex items-center space-x-4">
-              <div className="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center">
-                <BarChart3 className="w-6 h-6 text-white" />
-              </div>
-              <div>
-                <div className="font-bold text-white">Ex-Director of Growth</div>
-                <div className="text-orange-400 text-sm">GMG • Gulf Marketing Group</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Hero />
 
       {/* Trusted By Brands Carousel */}
       <section className="py-8 bg-white border-y border-slate-200">
@@ -923,78 +846,14 @@ export default function GamalConsultingLanding() {
               Latest insights and trends scraped from across the web to keep you ahead of the curve.
             </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card className="bg-white border-slate-200 hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className="flex items-center justify-between mb-2">
-                  <Badge className="bg-orange-100 text-orange-700">Meta Ads</Badge>
-                  <span className="text-sm text-slate-500">2 hours ago</span>
-                </div>
-                <CardTitle className="text-xl leading-tight">
-                  Meta&apos;s New AI Creative Tools Show 23% Better Performance
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-slate-600 mb-4">
-                  Latest data reveals Meta&apos;s AI-powered creative optimization is delivering significant improvements in
-                  ROAS across e-commerce verticals...
-                </p>
-                <Button variant="outline" size="sm" className="w-full bg-transparent">
-                  Read Full Update
-                  <ArrowRight className="ml-2 w-3 h-3" />
-                </Button>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-white border-slate-200 hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className="flex items-center justify-between mb-2">
-                  <Badge className="bg-blue-100 text-blue-700">Google Ads</Badge>
-                  <span className="text-sm text-slate-500">5 hours ago</span>
-                </div>
-                <CardTitle className="text-xl leading-tight">
-                  PMax Campaign Structure Changes Impact MENA Markets
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-slate-600 mb-4">
-                  Google&apos;s latest Performance Max updates are showing different results in MENA markets compared to
-                  US/EU benchmarks...
-                </p>
-                <Button variant="outline" size="sm" className="w-full bg-transparent">
-                  Read Full Update
-                  <ArrowRight className="ml-2 w-3 h-3" />
-                </Button>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-white border-slate-200 hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className="flex items-center justify-between mb-2">
-                  <Badge className="bg-green-100 text-green-700">Industry News</Badge>
-                  <span className="text-sm text-slate-500">1 day ago</span>
-                </div>
-                <CardTitle className="text-xl leading-tight">
-                  iOS 17.2 Attribution Changes: What E-commerce Needs to Know
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-slate-600 mb-4">
-                  Apple&apos;s latest privacy updates are reshaping attribution models. Here&apos;s how to adapt your measurement
-                  strategy...
-                </p>
-                <Button variant="outline" size="sm" className="w-full bg-transparent">
-                  Read Full Update
-                  <ArrowRight className="ml-2 w-3 h-3" />
-                </Button>
-              </CardContent>
-            </Card>
-          </div>
+                    <RecentUpdates />
           <div className="text-center mt-12">
-            <Button variant="outline" className="px-8 py-3 bg-transparent">
-              View All Updates
-              <ArrowRight className="ml-2 w-4 h-4" />
-            </Button>
+            <Link href="/performance-updates" passHref>
+              <Button variant="outline" className="px-8 py-3 bg-transparent">
+                View All Updates
+                <ArrowRight className="ml-2 w-4 h-4" />
+              </Button>
+            </Link>
           </div>
         </div>
       </section>

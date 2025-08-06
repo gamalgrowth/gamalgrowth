@@ -1,0 +1,11 @@
+# Task ID: 5
+# Title: Stage 2: Set Up the Blog / “My Thoughts”
+# Status: pending
+# Dependencies: None
+# Priority: medium
+# Description: Build a full-featured, secure, and easy-to-use content management system (CMS) that empowers Gamal to publish original articles, share his expertise, and grow his personal brand.
+# Details:
+
+
+# Test Strategy:
+
