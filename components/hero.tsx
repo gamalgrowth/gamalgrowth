@@ -1,9 +1,7 @@
-"use client"
-
 import { Button } from "@/components/ui/button"
 import {
   ArrowRight,
-  CreditCard,
+  Phone,
   Clock,
 } from "lucide-react"
 
@@ -52,57 +50,69 @@ export default function Hero() {
         <div className="max-w-3xl">
           <div className="space-y-8">
             <div className="space-y-6">
-              <h1 className="text-6xl lg:text-8xl font-bold leading-tight">
+              <div className="inline-block rounded-full bg-orange-950/40 border border-orange-600/50 px-3 py-1.5 mb-4 backdrop-blur-sm">
+                <p className="text-sm font-semibold text-white">
+                  Mohamed Gamal, MBA
+                </p>
+              </div>
+              <h1 className="text-[3.56rem] lg:text-[5.7rem] font-bold leading-tight">
                 Turn Ad Spend into <span className="text-orange-500 relative">Profit-Fuel</span>
               </h1>
 
-              <p className="text-xl text-slate-300 leading-relaxed max-w-2xl">
+              <p className="text-[15px] text-slate-300 leading-relaxed max-w-2xl">
                 Fractional Head of Performance Marketing for 7-8-figure MENA e-commerce brands. AI-driven systems
                 wired directly to your P&L.
               </p>
 
-              <div className="flex flex-wrap items-center gap-8 text-orange-400 text-lg">
-                <div className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
+              <ul className="flex flex-wrap items-center justify-center md:justify-start gap-x-4 gap-y-2 text-orange-400 text-[10px] md:text-xs">
+                <li className="flex items-center space-x-1.5">
+                  <div className="w-1.5 h-1.5 bg-orange-500 rounded-full"></div>
                   <span>
-                    <span className="text-orange-500 font-bold text-2xl">+25%</span> ROAS in 6 months
+                    <span className="font-bold text-sm">+25%</span> ROAS in 6 months
                   </span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
+                </li>
+                <li className="flex items-center space-x-1.5">
+                  <div className="w-1.5 h-1.5 bg-orange-500 rounded-full"></div>
                   <span>
-                    <span className="text-orange-500 font-bold text-2xl">14</span> years MENA experience
+                    <span className="font-bold text-sm">14</span> years MENA experience
                   </span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
+                </li>
+                <li className="flex items-center space-x-1.5">
+                  <div className="w-1.5 h-1.5 bg-orange-500 rounded-full"></div>
                   <span>
-                    <span className="text-orange-500 font-bold text-2xl">2</span> audit slots/month
+                    <span className="font-bold text-sm">2</span> audit slots/month
                   </span>
-                </div>
-              </div>
+                </li>
+              </ul>
             </div>
 
             <div className="space-y-4">
               <Button
                 onClick={() => handleStripePayment("one_hour_strategy_call_incl_tax", "One-Hour Strategy Call")}
                 size="lg"
-                className="bg-orange-500 hover:bg-orange-600 text-white px-12 py-6 text-xl font-semibold rounded-xl shadow-xl hover:shadow-2xl transition-all cursor-pointer"
+                className="bg-orange-500 hover:bg-orange-600 text-white px-10 py-5 text-lg font-semibold rounded-xl shadow-xl hover:shadow-2xl transition-all cursor-pointer"
               >
-                <CreditCard className="mr-3 w-6 h-6" />
+                <Phone className="mr-2 w-5 h-5" />
                 Book a One-Hour Strategy Call - AED 999
-                <ArrowRight className="ml-3 w-6 h-6" />
+                <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
-              <p className="text-sm text-slate-400 flex items-center space-x-2">
-                <Clock className="w-4 h-4" />
-                <span>Limited availability • Targeted expert advice</span>
-              </p>
+              <div className="flex flex-wrap items-center justify-between gap-4">
+                <p className="text-sm text-slate-400 flex items-center space-x-2">
+                  <Clock className="w-4 h-4" />
+                  <span>Limited availability • Targeted expert advice</span>
+                </p>
+              </div>
             </div>
           </div>
         </div>
+        <div className="absolute right-4 bottom-4 flex items-center gap-2">
+          <img src="/logos/GMG.png" alt="GMG Logo" className="h-5" />
+          <div className="flex flex-col items-start text-left">
+            <p className="text-[9px] font-bold text-white leading-tight">Ex-Director of Growth</p>
+            <p className="text-[9px] text-slate-400 leading-tight">GMG - Gulf Marketing Group</p>
+          </div>
+        </div>
       </div>
-
-
     </section>
   )
 }
