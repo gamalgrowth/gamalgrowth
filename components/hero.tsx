@@ -33,7 +33,7 @@ export default function Hero() {
   }
 
   return (
-    <section className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden min-h-[500px] md:min-h-[700px]">
+    <section className="relative bg-slate-900 text-white overflow-hidden">
       <div className="absolute inset-0 w-full h-full">
         <picture className="absolute inset-0 w-full h-full">
           <source media="(min-width: 1024px)" srcSet="/images/Gamal-photo-1.png" />
@@ -41,12 +41,13 @@ export default function Hero() {
           <img
             src="/images/Gamal-photo-3.png"
             alt="Background"
-            className="w-full h-full object-cover object-center"
+            className="w-full h-full object-cover object-right"
           />
         </picture>
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/40 to-transparent"></div>
       </div>
       
-      <div className="relative container mx-auto px-4 z-20 pt-40 pb-16 md:py-24">
+      <div className="relative w-full px-6 md:px-12 lg:px-20 z-20 flex flex-col justify-center min-h-[600px] md:min-h-[700px] py-16">
         <div className="max-w-3xl">
           <div className="space-y-8">
             <div className="space-y-6">
@@ -55,16 +56,16 @@ export default function Hero() {
                   Mohamed Gamal, MBA
                 </p>
               </div>
-              <h1 className="text-[3.56rem] lg:text-[5.7rem] font-bold leading-tight">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
                 Turn Ad Spend into <span className="text-orange-500 relative">Profit-Fuel</span>
               </h1>
 
-              <p className="text-[15px] text-slate-300 leading-relaxed max-w-2xl">
+              <p className="text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl">
                 Fractional Head of Performance Marketing for 7-8-figure MENA e-commerce brands. AI-driven systems
                 wired directly to your P&L.
               </p>
 
-              <ul className="flex flex-col items-start gap-y-2 text-orange-400 text-xs md:flex-row md:flex-wrap md:justify-start md:gap-x-4">
+              <ul className="flex flex-col items-start gap-y-2 text-orange-400 text-xs sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-4">
                 <li className="flex items-center space-x-1.5">
                   <div className="w-1.5 h-1.5 bg-orange-500 rounded-full"></div>
                   <span>
@@ -90,11 +91,11 @@ export default function Hero() {
               <Button
                 onClick={() => handleStripePayment("one_hour_strategy_call_incl_tax", "One-Hour Strategy Call")}
                 size="lg"
-                className="bg-orange-500 hover:bg-orange-600 text-white w-full md:w-auto px-8 py-4 text-base font-semibold rounded-xl shadow-xl hover:shadow-2xl transition-all cursor-pointer sm:px-10 sm:py-5 sm:text-lg"
+                className="bg-orange-500 hover:bg-orange-600 text-white w-full sm:w-auto px-6 py-3 sm:px-8 sm:py-4 text-sm sm:text-base font-semibold rounded-xl shadow-xl hover:shadow-2xl transition-all cursor-pointer flex items-center justify-center gap-2"
               >
-                <Phone className="mr-2 w-5 h-5" />
-                Book a One-Hour Strategy Call - AED 999
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <Phone className="h-4 w-4 sm:h-5 sm:w-5" />
+                <span>Book a One-Hour Strategy Call - AED 999</span>
+                <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5" />
               </Button>
               <div className="flex flex-wrap items-center justify-start gap-4">
                 <p className="text-sm text-slate-400 flex items-center space-x-2">
