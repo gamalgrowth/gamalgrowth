@@ -46,7 +46,7 @@ export default function Hero() {
         </picture>
       </div>
       
-      <div className="relative container mx-auto px-4 z-20 pt-56 pb-12 md:py-24">
+      <div className="relative container mx-auto px-4 z-20 pt-40 pb-16 md:py-24">
         <div className="max-w-3xl">
           <div className="space-y-8">
             <div className="space-y-6">
@@ -64,7 +64,7 @@ export default function Hero() {
                 wired directly to your P&L.
               </p>
 
-              <ul className="flex flex-wrap items-center justify-center md:justify-start gap-x-4 gap-y-2 text-orange-400 text-[10px] md:text-xs">
+              <ul className="flex flex-col items-start gap-y-2 text-orange-400 text-xs md:flex-row md:flex-wrap md:justify-start md:gap-x-4">
                 <li className="flex items-center space-x-1.5">
                   <div className="w-1.5 h-1.5 bg-orange-500 rounded-full"></div>
                   <span>
@@ -90,13 +90,13 @@ export default function Hero() {
               <Button
                 onClick={() => handleStripePayment("one_hour_strategy_call_incl_tax", "One-Hour Strategy Call")}
                 size="lg"
-                className="bg-orange-500 hover:bg-orange-600 text-white px-10 py-5 text-lg font-semibold rounded-xl shadow-xl hover:shadow-2xl transition-all cursor-pointer"
+                className="bg-orange-500 hover:bg-orange-600 text-white w-full md:w-auto px-8 py-4 text-base font-semibold rounded-xl shadow-xl hover:shadow-2xl transition-all cursor-pointer sm:px-10 sm:py-5 sm:text-lg"
               >
                 <Phone className="mr-2 w-5 h-5" />
                 Book a One-Hour Strategy Call - AED 999
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
-              <div className="flex flex-wrap items-center justify-between gap-4">
+              <div className="flex flex-wrap items-center justify-start gap-4">
                 <p className="text-sm text-slate-400 flex items-center space-x-2">
                   <Clock className="w-4 h-4" />
                   <span>Limited availability • Targeted expert advice</span>
@@ -106,8 +106,8 @@ export default function Hero() {
           </div>
         </div>
         <div className="absolute right-4 bottom-4 flex flex-col items-start text-left">
-          <p className="text-[9px] font-bold text-white leading-tight">Ex-Director of Growth</p>
-          <p className="text-[9px] text-slate-400 leading-tight">GMG - Gulf Marketing Group</p>
+          <p className="text-xs font-bold text-white leading-tight">Ex-Director of Growth</p>
+          <p className="text-xs text-slate-400 leading-tight">GMG - Gulf Marketing Group</p>
         </div>
       </div>
     </section>
