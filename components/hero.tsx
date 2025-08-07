@@ -47,7 +47,7 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/40 to-transparent"></div>
       </div>
       
-      <div className="relative container mx-auto px-4 z-20 flex flex-col justify-center min-h-[600px] md:min-h-[700px] py-16">
+      <div className="relative w-full px-6 md:px-12 lg:px-20 z-20 flex flex-col justify-center min-h-[600px] md:min-h-[700px] py-16">
         <div className="max-w-3xl">
           <div className="space-y-8">
             <div className="space-y-6">
@@ -91,11 +91,11 @@ export default function Hero() {
               <Button
                 onClick={() => handleStripePayment("one_hour_strategy_call_incl_tax", "One-Hour Strategy Call")}
                 size="lg"
-                className="bg-orange-500 hover:bg-orange-600 text-white w-full sm:w-auto px-6 py-3 sm:px-8 sm:py-4 text-sm sm:text-base font-semibold rounded-xl shadow-xl hover:shadow-2xl transition-all cursor-pointer flex items-center justify-center"
+                className="bg-orange-500 hover:bg-orange-600 text-white w-full sm:w-auto px-6 py-3 sm:px-8 sm:py-4 text-sm sm:text-base font-semibold rounded-xl shadow-xl hover:shadow-2xl transition-all cursor-pointer flex items-center justify-center gap-2"
               >
-                <Phone className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
+                <Phone className="h-4 w-4 sm:h-5 sm:w-5" />
                 <span>Book a One-Hour Strategy Call - AED 999</span>
-                <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
+                <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5" />
               </Button>
               <div className="flex flex-wrap items-center justify-start gap-4">
                 <p className="text-sm text-slate-400 flex items-center space-x-2">
