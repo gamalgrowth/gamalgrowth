@@ -27,8 +27,6 @@ import {
 import { useState, useEffect, useRef } from "react"
 import Link from "next/link"
 
-import RecentUpdates from "@/components/recent-updates"
-
 export default function GamalConsultingLanding() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const animationFrameRef = useRef<number | null>(null)
