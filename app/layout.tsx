@@ -32,7 +32,8 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const nonce = headers().get('x-nonce') || undefined;
+  const headersList = await headers();
+  const nonce = headersList.get('x-nonce') || undefined;
   return (
     <html lang="en">
       {/* Google Tag Manager */}
