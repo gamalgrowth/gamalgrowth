@@ -1,0 +1,12 @@
+{
+  "/api/posts/route": "/api/posts",
+  "/api/create-checkout-session/route": "/api/create-checkout-session",
+  "/_not-found/page": "/_not-found",
+  "/api/updates/route": "/api/updates",
+  "/api/scrape/route": "/api/scrape",
+  "/api/webhook/route": "/api/webhook",
+  "/my-thoughts/page": "/my-thoughts",
+  "/page": "/",
+  "/success/page": "/success",
+  "/performance-updates/page": "/performance-updates"
+}
