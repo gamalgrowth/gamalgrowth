@@ -25,7 +25,6 @@ import {
   X,
 } from "lucide-react"
 import { useState, useEffect, useRef } from "react"
-import Link from "next/link"
 
 import Hero from "@/components/hero"
 
@@ -148,9 +147,6 @@ export default function GamalConsultingLanding() {
             <a href="#results" onClick={handleSmoothScroll} className="text-slate-600 hover:text-orange-500 transition-colors">
               Results
             </a>
-            <Link href="/performance-updates" className="text-slate-600 hover:text-orange-500 transition-colors">
-              Performance Updates
-            </Link>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -181,9 +177,6 @@ export default function GamalConsultingLanding() {
               >
                 Results
               </a>
-              <Link href="/performance-updates" className="text-slate-600 hover:text-orange-500 transition-colors py-2">
-                Performance Updates
-              </Link>
             </nav>
           </div>
         )}
