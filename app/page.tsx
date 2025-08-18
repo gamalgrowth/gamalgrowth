@@ -25,7 +25,6 @@ import {
   X,
 } from "lucide-react"
 import { useState, useEffect, useRef } from "react"
-import Link from "next/link"
 
 import Hero from "@/components/hero"
 
