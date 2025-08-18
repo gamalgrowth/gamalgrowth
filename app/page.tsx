@@ -27,7 +27,6 @@ import {
 import { useState, useEffect, useRef } from "react"
 import Link from "next/link"
 
-import RecentUpdates from "@/components/recent-updates"
 import Hero from "@/components/hero"
 
 export default function GamalConsultingLanding() {
@@ -152,9 +151,6 @@ export default function GamalConsultingLanding() {
             <Link href="/performance-updates" className="text-slate-600 hover:text-orange-500 transition-colors">
               Performance Updates
             </Link>
-            <Link href="/my-thoughts" className="text-slate-600 hover:text-orange-500 transition-colors">
-              My Thoughts
-            </Link>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -187,9 +183,6 @@ export default function GamalConsultingLanding() {
               </a>
               <Link href="/performance-updates" className="text-slate-600 hover:text-orange-500 transition-colors py-2">
                 Performance Updates
-              </Link>
-              <Link href="/my-thoughts" className="text-slate-600 hover:text-orange-500 transition-colors py-2">
-                My Thoughts
               </Link>
             </nav>
           </div>
@@ -833,156 +826,6 @@ export default function GamalConsultingLanding() {
                 </div>
               </CardContent>
             </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Performance Marketing Updates Section */}
-      <section id="updates" className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center space-y-4 mb-16">
-            <h2 className="text-4xl font-bold text-slate-900">Performance Marketing Updates</h2>
-            <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-              Latest insights and trends scraped from across the web to keep you ahead of the curve.
-            </p>
-          </div>
-                    <RecentUpdates />
-          <div className="text-center mt-12">
-            <Link href="/performance-updates" passHref>
-              <Button variant="outline" className="px-8 py-3 bg-transparent">
-                View All Updates
-                <ArrowRight className="ml-2 w-4 h-4" />
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* My Thoughts Section */}
-      <section id="thoughts" className="py-20 bg-slate-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center space-y-4 mb-16">
-            <h2 className="text-4xl font-bold text-slate-900">My Thoughts</h2>
-            <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-              Insights from 14 years of scaling MENA e-commerce brands and navigating the evolving performance marketing
-              landscape.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 gap-8">
-            <Card className="bg-white border-0 shadow-lg">
-              <CardHeader>
-                <div className="flex items-center space-x-4 mb-4">
-                  <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
-                    <Brain className="w-6 h-6 text-orange-600" />
-                  </div>
-                  <div>
-                    <div className="text-sm text-slate-500">December 15, 2024</div>
-                    <div className="font-semibold text-slate-900">5 min read</div>
-                  </div>
-                </div>
-                <CardTitle className="text-2xl leading-tight mb-4">
-                  Why ROAS is Lying to Your P&L (And What to Track Instead)
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-slate-600 mb-6">
-                  After auditing 50+ MENA e-commerce accounts this year, I&apos;ve seen the same pattern: brands celebrating
-                  4x ROAS while their profit margins shrink. Here&apos;s why traditional metrics are broken and what actually
-                  matters...
-                </p>
-                <Button className="w-full bg-orange-500 hover:bg-orange-600 text-white">
-                  Read Full Article
-                  <ArrowRight className="ml-2 w-4 h-4" />
-                </Button>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-white border-0 shadow-lg">
-              <CardHeader>
-                <div className="flex items-center space-x-4 mb-4">
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                    <Target className="w-6 h-6 text-blue-600" />
-                  </div>
-                  <div>
-                    <div className="text-sm text-slate-500">December 10, 2024</div>
-                    <div className="font-semibold text-slate-900">8 min read</div>
-                  </div>
-                </div>
-                <CardTitle className="text-2xl leading-tight mb-4">
-                  The MENA E-commerce Attribution Crisis (And How AI Can Fix It)
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-slate-600 mb-6">
-                  iOS updates, cookie deprecation, and regional privacy laws are creating a perfect storm for
-                  attribution in MENA markets. But there&apos;s a way forward using AI-powered modeling...
-                </p>
-                <Button className="w-full bg-blue-500 hover:bg-blue-600 text-white">
-                  Read Full Article
-                  <ArrowRight className="ml-2 w-4 h-4" />
-                </Button>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-white border-0 shadow-lg">
-              <CardHeader>
-                <div className="flex items-center space-x-4 mb-4">
-                  <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
-                    <TrendingUp className="w-6 h-6 text-green-600" />
-                  </div>
-                  <div>
-                    <div className="text-sm text-slate-500">December 5, 2024</div>
-                    <div className="font-semibold text-slate-900">6 min read</div>
-                  </div>
-                </div>
-                <CardTitle className="text-2xl leading-tight mb-4">
-                  Black Friday 2024: What Worked (And What Didn&apos;t) in GCC Markets
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-slate-600 mb-6">
-                  I analyzed performance data from 12 GCC brands during Black Friday 2024. The results were surprising -
-                  traditional strategies failed while these 3 approaches dominated...
-                </p>
-                <Button className="w-full bg-green-500 hover:bg-green-600 text-white">
-                  Read Full Article
-                  <ArrowRight className="ml-2 w-4 h-4" />
-                </Button>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-white border-0 shadow-lg">
-              <CardHeader>
-                <div className="flex items-center space-x-4 mb-4">
-                  <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
-                    <Calculator className="w-6 h-6 text-purple-600" />
-                  </div>
-                  <div>
-                    <div className="text-sm text-slate-500">November 28, 2024</div>
-                    <div className="font-semibold text-slate-900">10 min read</div>
-                  </div>
-                </div>
-                <CardTitle className="text-2xl leading-tight mb-4">
-                  Building a POAS Dashboard That Actually Drives Decisions
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-slate-600 mb-6">
-                  Most performance dashboards are vanity metric museums. Here&apos;s how to build a POAS-focused dashboard
-                  that connects directly to your P&L and drives real business decisions...
-                </p>
-                <Button className="w-full bg-purple-500 hover:bg-purple-600 text-white">
-                  Read Full Article
-                  <ArrowRight className="ml-2 w-4 h-4" />
-                </Button>
-              </CardContent>
-            </Card>
-          </div>
-          <div className="text-center mt-12">
-            <Button variant="outline" className="px-8 py-3 bg-transparent">
-              View All Articles
-              <ArrowRight className="ml-2 w-4 h-4" />
-            </Button>
           </div>
         </div>
       </section>
