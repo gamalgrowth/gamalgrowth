@@ -5,7 +5,7 @@
       "headers": [
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://checkout.stripe.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://checkout.stripe.com; frame-src https://*.stripe.com; media-src 'self';"
+          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://checkout.stripe.com; style-src 'self' 'unsafe-inline'; frame-src https://checkout.stripe.com; img-src 'self' data: https:; connect-src 'self' https://checkout.stripe.com"
         }
       ]
     }
@@ -14,6 +14,13 @@
     {
       "path": "/api/scrape",
       "schedule": "0 0 * * *"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "destination": "https://www.gambradigital.com/$1",
+      "permanent": true
     }
   ]
 }
